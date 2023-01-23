@@ -140,11 +140,11 @@ add_action( 'widgets_init', 'wp_base_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wp_base_scripts() {
-	wp_enqueue_style( 'base-styles', get_template_directory_uri() . '/css/base-styles.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'base-styles', get_template_directory_uri() . '/css/base-coanil.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'coanil-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'coanil-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'base-scripts', get_template_directory_uri() . '/js/base-scripts.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'base-scripts', get_template_directory_uri() . '/js/base-coanil.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 
@@ -246,4 +246,4 @@ require get_template_directory() . '/inc/custom-posttypes.php';
 /**
  * ACF
  */
-require get_template_directory() . '/inc/acf-functions.php';
+// require get_template_directory() . '/inc/acf-functions.php';

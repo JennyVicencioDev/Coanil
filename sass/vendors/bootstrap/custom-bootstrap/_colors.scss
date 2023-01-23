@@ -1,31 +1,64 @@
-// Paleta de colores de tema:
-$testcolor: #dc0000;
+// Paleta de colores Coanil:
+$azul: #005D9F;
+$celeste: #009EE3;
+$verde: #386539;
+$verde-claro: #A2C037;
+$amarillo: #E4A71A;
+$amarillo-oscuro: #936D15;
+$rojo: #C20E1A;
+$rojo-claro: #E4666E;
+$fucsia: #CC0F64;
+$fucsia-oscuro: #A9004C;
+$violeta: #65477C;
+$violeta-claro: #AA81CB;
+$enlace: #009DE0;
+$texto: #585858;
 
 $colors: (
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800,
-  "newcolor" :  $testcolor // color paleta de prueba
+  "blue":         $azul,
+  "light-blue":   $celeste,
+  "fuchsia":       $fucsia,
+  "dark-fuchsia": $fucsia-oscuro,
+  "red":          $rojo,
+  "light-red":    $rojo-claro,
+  "yellow":       $amarillo,
+  "dark-yellow":  $amarillo-oscuro,
+  "green":        $verde,
+  "light-green":  $verde-claro,
+  "black":        $black,
+  "white":        $white,
+  "gray":         $gray-600,
+  "gray-dark":    $gray-800,
 );
 
+$blue-100: tint-color($azul, 80%);
+$blue-200: tint-color($azul, 60%);
+$blue-300: tint-color($azul, 40%);
+$blue-400: tint-color($azul, 20%);
+$blue-500: $azul;
+$blue-600: shade-color($azul, 20%);
+$blue-700: shade-color($azul, 40%);
+$blue-800: shade-color($azul, 60%);
+$blue-900: shade-color($azul, 80%);
+$blues: (
+  "blue-100": $blue-100,
+  "blue-200": $blue-200,
+  "blue-300": $blue-300,
+  "blue-400": $blue-400,
+  "blue-500": $blue-500,
+  "blue-600": $blue-600,
+  "blue-700": $blue-700,
+  "blue-800": $blue-800,
+  "blue-900": $blue-900
+);
 
 // Colores Temáticos Bootstrap
 //
-// Variables de colores temáticos predefinidos:
-// $primary:       $blue;
-// $secondary:     $gray-600;
-// $success:       $green;
-// $info:          $cyan;
+$primary:       $azul;
+$secondary:   $fucsia;
+$success:       $verde;
+$info:          $celeste;
+$link:          $enlace;
 // $warning:       $yellow;
 // $danger:        $red;
 // $light:         $gray-100;
@@ -37,6 +70,7 @@ $theme-colors: (
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
+  "link":       $link,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
@@ -45,7 +79,7 @@ $theme-colors: (
 
 // Custom theme colors
 $custom-theme-colors: (
-  "test": $testcolor, // color temático de prueba
+ // "test": $testcolor, // color temático de prueba
 )!default;
 
 // Custom-theme-colors mapping

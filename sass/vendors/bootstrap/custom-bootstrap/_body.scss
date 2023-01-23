@@ -17,16 +17,16 @@
 // $enable-important-utilities:  true;
 
 // Body
-// $body-color: #000;
-// $body-bg: #fff;
+$body-color: #585858;
+$body-bg: #fff;
 // $body-text-align: left;
 
 // Links
-// $link-color:                              $primary;
-// $link-decoration:                         underline;
+$link-color:                              #009DE0;
+$link-decoration:                         none;
 // $link-shade-percentage:                   20%;
 // $link-hover-color:                        shift-color($link-color, $link-shade-percentage);
-// $link-hover-decoration:                   null;
+$link-hover-decoration:                   underline;
 
 // Grid breakpoints
 // $grid-breakpoints: (

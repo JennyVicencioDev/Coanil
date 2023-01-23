@@ -6,9 +6,9 @@
  */
 
 /* Acf color picker fix */
-// function tu_mundo_acf_input_admin_footer() { 
+function tu_mundo_acf_input_admin_footer() { 
 ?>
-	<!-- <script type="text/javascript">
+	<script type="text/javascript">
 	(function($) {
 		acf.add_filter('color_picker_args', function( args, $field ){
 		// add the hexadecimal codes here for the colors you want to appear as swatches
@@ -28,10 +28,10 @@
 		return args; 
 		});
 	})(jQuery);
-	</script> -->
+	</script>
 <?php 
-// } 
-// add_action('acf/input/admin_footer', 'tu_mundo_acf_input_admin_footer');
+} 
+add_action('acf/input/admin_footer', 'tu_mundo_acf_input_admin_footer');
 
 /* Add Options Page */
 // if( function_exists('acf_add_options_page') ) {
