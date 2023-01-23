@@ -1,0 +1,129 @@
+/*!
+ * Bootstrap v5.2.3 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/blob/main/LICENSE)
+ */
+
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "functions";
+
+
+// Include any default variable overrides here
+@import "custom-bootstrap/body";
+@import "custom-bootstrap/typography";
+@import "custom-bootstrap/components";
+@import "custom-bootstrap/utilities";
+
+// Include remainder of required Bootstrap stylesheets
+@import "variables";
+
+// Include any default map overrides here
+@import "custom-bootstrap/colors";
+
+// Include remainder of required parts
+@import "maps";
+@import "mixins";
+@import "root";
+
+// Include any optional Bootstrap CSS as needed
+@import "utilities";
+
+/* This will generate new .bg-{color}, .text-{color} utilities for black, white and body colors */
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-colors: map-merge($utilities-colors, (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-color)
+));
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+/* This will generate new .text-{color}-{level} utilities for every color and level. */
+// $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "textcolor": map-merge(
+//       map-get($utilities, "color"),
+//       (
+//         values: map-merge(
+//           map-get(map-get($utilities, "color"), "values"),
+//           ( $all-colors ),
+//         ),
+//       ),
+//     ),
+//     "bgcolor": map-merge(
+//       map-get($utilities, "background-color"),
+//       (
+//         values: map-merge(
+//           map-get(map-get($utilities, "background-color"), "values"),
+//           ( $all-colors ),
+//         ),
+//       ),
+//     ),
+//   )
+// );
+
+// This will generate .border-{breakpoint}-{position}
+// $utilities: map-merge(
+//   $utilities, (
+//     "border": map-merge(
+//       map-get($utilities, "border"),
+//       ( responsive: true ),
+//     ),
+//     "border-top": map-merge(
+//       map-get($utilities, "border-top"),
+//       ( responsive: true ),
+//     ),
+//     "border-end": map-merge(
+//       map-get($utilities, "border-end"),
+//       ( responsive: true ),
+//     ),
+//     "border-bottom": map-merge(
+//       map-get($utilities, "border-bottom"),
+//       ( responsive: true ),
+//     ),
+//     "border-start": map-merge(
+//       map-get($utilities, "border-start"),
+//       ( responsive: true ),
+//     ),
+//   )
+// );
+
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+@import "placeholders";
+
+// Helpers
+@import "helpers";
+
+// Utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "utilities/api";

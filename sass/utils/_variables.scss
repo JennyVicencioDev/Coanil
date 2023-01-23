@@ -1,0 +1,42 @@
+// Paleta Tema
+$blue:        #014F86;
+$light-blue:  #00AAE5;
+$purple:      #A81F83;
+$fuchsia:     #E83484;
+$red:         #E7343B;
+$orange:      #FF8000;
+$yellow:      #FFDA00;
+$green:       #198754;
+$cyan:        #007591;
+
+$gradient: linear-gradient(90deg, $blue 19.55%, $light-blue 80.65%);
+
+$white: #fff;
+$gray: #525252;
+$body-text: #343a40;
+$body-bg: #F9F9F9;
+
+$primary: $cyan;
+$secondary: $orange;
+
+// breakpoints
+$sm: #{'min-width: 576px'};
+$md: #{'min-width: 768px'};
+$lg: #{'min-width: 992px'};
+$xl: #{'min-width: 1200px'};
+$xxl: #{'min-width: 1400px'};
+$xxxl: #{'min-width: 1920px'};
+
+$breakpoints: (
+  'sm': screen and ($sm),
+  'md': screen and ($md),
+  'lg': screen and ($lg),
+  'xl': screen and ($xl),
+  'xxl': screen and ($xxl),
+  'xxxl': screen and ($xxxl),
+);
+
+
+
+
+
