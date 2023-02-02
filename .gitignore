@@ -21,6 +21,7 @@ package.json
 .env.test.local
 .env.production.local
 .vscode
+.gitignore
 
 # log files
 *.log

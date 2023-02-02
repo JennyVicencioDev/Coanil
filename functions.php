@@ -50,7 +50,7 @@ if ( ! function_exists( 'wp_base_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'coanil' ),
+				'menu-navbar' => esc_html__( 'Menú navbar', 'coanil' ),
 			)
 		);
 
@@ -139,7 +139,7 @@ add_action( 'widgets_init', 'wp_base_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function wp_base_scripts() {
+function ziemax_scripts() {
 	wp_enqueue_style( 'base-styles', get_template_directory_uri() . '/css/base-coanil.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'coanil-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'coanil-style', 'rtl', 'replace' );
@@ -152,7 +152,7 @@ function wp_base_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'wp_base_scripts' );
+add_action( 'wp_enqueue_scripts', 'ziemax_scripts' );
 
 /**
  * Remove default Wordpress jQuery
