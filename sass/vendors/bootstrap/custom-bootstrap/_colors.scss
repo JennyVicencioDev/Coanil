@@ -1,45 +1,45 @@
 // Paleta de colores Coanil:
-$azul: #005D9F;
-$celeste: #009EE3;
-$verde: #386539;
-$verde-claro: #A2C037;
-$amarillo: #E4A71A;
-$amarillo-oscuro: #936D15;
-$rojo: #C20E1A;
-$rojo-claro: #E4666E;
-$fucsia: #CC0F64;
-$fucsia-oscuro: #A9004C;
-$violeta: #65477C;
-$violeta-claro: #AA81CB;
-$enlace: #009DE0;
-$texto: #585858;
+$blue: #005D9F;
+$light-blue: #009EE3;
+$green: #386539;
+$light-green: #A2C037;
+$yellow: #E4A71A;
+$dark-yellow: #936D15;
+$red: #C20E1A;
+$light-red: #E4666E;
+$fuchsia: #CC0F64;
+$dark-fuchsia: #A9004C;
+$purple: #65477C;
+$light-purple: #AA81CB;
+$link: #009DE0;
+$text: #585858;
 
 $colors: (
-  "blue":         $azul,
-  "light-blue":   $celeste,
-  "fuchsia":       $fucsia,
-  "dark-fuchsia": $fucsia-oscuro,
-  "red":          $rojo,
-  "light-red":    $rojo-claro,
-  "yellow":       $amarillo,
-  "dark-yellow":  $amarillo-oscuro,
-  "green":        $verde,
-  "light-green":  $verde-claro,
+  "blue":         $blue,
+  "light-blue":   $light-blue,
+  "fuchsia":       $fuchsia,
+  "dark-fuchsia": $dark-fuchsia,
+  "red":          $red,
+  "light-red":    $light-red,
+  "yellow":       $yellow,
+  "dark-yellow":  $dark-yellow,
+  "green":        $green,
+  "light-green":  $light-green,
   "black":        $black,
   "white":        $white,
   "gray":         $gray-600,
   "gray-dark":    $gray-800,
 );
 
-$blue-100: tint-color($azul, 80%);
-$blue-200: tint-color($azul, 60%);
-$blue-300: tint-color($azul, 40%);
-$blue-400: tint-color($azul, 20%);
-$blue-500: $azul;
-$blue-600: shade-color($azul, 20%);
-$blue-700: shade-color($azul, 40%);
-$blue-800: shade-color($azul, 60%);
-$blue-900: shade-color($azul, 80%);
+$blue-100: tint-color($blue, 80%);
+$blue-200: tint-color($blue, 60%);
+$blue-300: tint-color($blue, 40%);
+$blue-400: tint-color($blue, 20%);
+$blue-500: $blue;
+$blue-600: shade-color($blue, 20%);
+$blue-700: shade-color($blue, 40%);
+$blue-800: shade-color($blue, 60%);
+$blue-900: shade-color($blue, 80%);
 $blues: (
   "blue-100": $blue-100,
   "blue-200": $blue-200,
@@ -54,11 +54,11 @@ $blues: (
 
 // Colores Temáticos Bootstrap
 //
-$primary:       $azul;
-$secondary:   $fucsia;
-$success:       $verde;
-$info:          $celeste;
-$link:          $enlace;
+$primary:     $blue;
+$secondary:   $fuchsia;
+$success:     $green;
+$info:        $light-blue;
+$link:        $link;
 // $warning:       $yellow;
 // $danger:        $red;
 // $light:         $gray-100;
