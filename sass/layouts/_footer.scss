@@ -1,2 +1,40 @@
 @use "../utils/variables";
 
+.site-footer {
+   background-color: variables.$primary;
+   color: variables.$white;
+
+   .logo {
+      img, .custom-logo {
+         max-width: 160px;
+         width: 100%;
+         height: auto;
+      }
+   }
+
+   a {
+      color: variables.$white;
+   }
+}
+
+.footer-column {
+
+   &-title {
+      // color: variables.$white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+   }
+
+   ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+   }
+}
+
+.footer-copyright {
+   border-top: 1px solid variables.$white;
+   text-align: center;
+}
