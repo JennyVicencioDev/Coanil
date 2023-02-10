@@ -8,20 +8,18 @@
 // Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "functions";
 
+// Include remainder of required Bootstrap stylesheets
+@import "variables";
 
 // Include any default variable overrides here
+@import "custom-bootstrap/colors";
 @import "custom-bootstrap/body";
 @import "custom-bootstrap/buttons-forms";
 @import "custom-bootstrap/typography";
 @import "custom-bootstrap/components";
 @import "custom-bootstrap/tables";
-@import "custom-bootstrap/utilities";
-
-// Include remainder of required Bootstrap stylesheets
-@import "variables";
 
 // Include any default map overrides here
-@import "custom-bootstrap/colors";
 
 // Include remainder of required parts
 @import "maps";
@@ -32,66 +30,66 @@
 @import "utilities";
 
 /* This will generate new .bg-{color}, .text-{color} utilities for black, white and body colors */
-$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
-$utilities-colors: map-merge($utilities-colors, (
-    "black": to-rgb($black),
-    "white": to-rgb($white),
-    "body": to-rgb($body-color),
-));
-$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
-$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+// $utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+// $utilities-colors: map-merge($utilities-colors, (
+//     "black": to-rgb($black),
+//     "white": to-rgb($white),
+//     "body": to-rgb($body-color),
+// ));
+// $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+// $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 /* This will generate new .text-{color}-{level} utilities for every color and level. */
-$all-colors: map-merge-multiple($colors);
-$utilities: map-merge(
-  $utilities,
-  (
-    "textcolor": map-merge(
-      map-get($utilities, "color"),
-      (
-        values: map-merge(
-          map-get(map-get($utilities, "color"), "values"),
-          ( $all-colors ),
-        ),
-      ),
-    ),
-    "bgcolor": map-merge(
-      map-get($utilities, "background-color"),
-      (
-        values: map-merge(
-          map-get(map-get($utilities, "background-color"), "values"),
-          ( $all-colors ),
-        ),
-      ),
-    ),
-  )
-);
+// $all-colors: map-merge-multiple($colors);
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "textcolor": map-merge(
+//       map-get($utilities, "color"),
+//       (
+//         values: map-merge(
+//           map-get(map-get($utilities, "color"), "values"),
+//           ( $all-colors ),
+//         ),
+//       ),
+//     ),
+//     "bgcolor": map-merge(
+//       map-get($utilities, "background-color"),
+//       (
+//         values: map-merge(
+//           map-get(map-get($utilities, "background-color"), "values"),
+//           ( $all-colors ),
+//         ),
+//       ),
+//     ),
+//   )
+// );
 
 // This will generate .border-{breakpoint}-{position}
-$utilities: map-merge(
-  $utilities, (
-    "border": map-merge(
-      map-get($utilities, "border"),
-      ( responsive: true ),
-    ),
-    "border-top": map-merge(
-      map-get($utilities, "border-top"),
-      ( responsive: true ),
-    ),
-    "border-end": map-merge(
-      map-get($utilities, "border-end"),
-      ( responsive: true ),
-    ),
-    "border-bottom": map-merge(
-      map-get($utilities, "border-bottom"),
-      ( responsive: true ),
-    ),
-    "border-start": map-merge(
-      map-get($utilities, "border-start"),
-      ( responsive: true ),
-    ),
-  )
-);
+// $utilities: map-merge(
+//   $utilities, (
+//     "border": map-merge(
+//       map-get($utilities, "border"),
+//       ( responsive: true ),
+//     ),
+//     "border-top": map-merge(
+//       map-get($utilities, "border-top"),
+//       ( responsive: true ),
+//     ),
+//     "border-end": map-merge(
+//       map-get($utilities, "border-end"),
+//       ( responsive: true ),
+//     ),
+//     "border-bottom": map-merge(
+//       map-get($utilities, "border-bottom"),
+//       ( responsive: true ),
+//     ),
+//     "border-start": map-merge(
+//       map-get($utilities, "border-start"),
+//       ( responsive: true ),
+//     ),
+//   )
+// );
 
 @import "reboot";
 @import "type";

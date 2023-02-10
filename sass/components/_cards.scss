@@ -1,1 +1,68 @@
 @use "../utils/variables";
+
+.card-area {
+   border: 0;
+   height: auto;
+   max-width: 100%;
+   overflow: hidden;
+
+   .card-title {
+      font-weight: 700;
+   }
+
+   .card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 170px;
+      
+      &::before {
+         content: '';
+         position: absolute;
+         left: 1rem;
+         top: 0;
+         background-image: url(./img/areas/mask-card-area-blue.svg);
+         background-repeat: no-repeat;
+         height: 100%;
+         width: 100%;
+         z-index: 0;
+      }
+
+      img {
+         position: relative;
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         clip-path: url(#mask-cards-areas);
+         z-index: 1;
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 0;
+         background-color: rgba(variables.$blue, 0.3);
+         clip-path: url(#mask-cards-areas);
+         height: 100%;
+         width: 100%;
+         z-index: 2;
+      }
+   }
+
+   .card-body {      
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 2rem 2rem 13rem;
+   }
+
+   p {
+      font-size: 1.125rem;
+   }
+
+   @media screen and (variables.$md) {
+      height: 390px;
+      width: 560px;
+   }
+}

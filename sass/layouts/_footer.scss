@@ -24,6 +24,7 @@
       font-weight: 700;
       font-size: 1.25rem;
       margin-bottom: 1rem;
+      margin-top: 1rem;
    }
 
    ul {
@@ -31,6 +32,12 @@
       margin: 0;
       padding: 0;
 
+   }
+
+   @media screen and (variables.$lg) {
+      &-title {
+         margin-top: 0;
+      }
    }
 }
 

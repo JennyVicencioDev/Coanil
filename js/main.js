@@ -21,23 +21,29 @@ $(function () {
 
    // sliders
    var bannerTop = $('.banner-top-slider').flickity({
-      autoPlay: 5000,
+      autoPlay: 3000,
+      cellAlign: 'center',
+      contain: true,
+      wrapAround: true,
+      prevNextButtons: false,
+      pageDots: true,
+      groupCells: 1,
+      fade: true,
+      on: {
+         ready: function() { 
+            let dots = this.pageDots.holder;
+            console.log(dots);
+            $(dots).wrap('<div class="container-md"></div>');
+         },
+      }
+   }),
+   xSliders = $('').flickity({
+      autoPlay: true,
       cellAlign: 'center',
       contain: true,
       wrapAround: true,
       prevNextButtons: true,
-      pageDots: true,
-      groupCells: 1,
-      adaptiveHeight: false,
-      draggable: false
-   }),
-   planesSliders = $('.planes-cards-container').flickity({
-      autoPlay: false,
-      cellAlign: 'center',
-      contain: false,
-      wrapAround: false,
-      prevNextButtons: true,
-      pageDots: true,
+      pageDots: false,
       groupCells: true,
       adaptiveHeight: true,
       setGallerySize: true,
@@ -73,11 +79,14 @@ $(function () {
          },
       }
    }),
-   autoplaySliders = $('').flickity({
-      autoPlay: 3000,
+   autoplaySliders = $('.alianzas-slider').flickity({
+      autoPlay: 2000,
       cellAlign: 'center',
       contain: true,
-      freeScroll: false,
-      wrapAround: false,
-      groupCells: true,
+      wrapAround: true,
+      groupCells: 1,
+      prevNextButtons: true,
+      pageDots: false,
+      setGallerySize: true,
+      fade: true,
    });

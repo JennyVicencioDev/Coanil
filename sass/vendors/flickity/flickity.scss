@@ -1,27 +1,22 @@
 /*! Flickity v3.0.0
 https://flickity.metafizzy.co
 ---------------------------------------------- */
-$blue:        #014F86;
-$light-blue:  #00AAE5;
-$cyan:        #007591; 
-$purple:      #A81F83;
-$fuchsia:     #E83484;
+@use "../../utils/variables";
 
-$primaryColor: $cyan;
-$secondaryColor: rgba($cyan, 0.3);
+$primaryColor: variables.$blue;
+$secondaryColor: rgba($blue, 0.3);
 
-$dotHeight: 0.75rem;
-$dotWidth: 0.75rem;
-$dotActiveHeight: 1.25rem;
-$dotActiveWidth: 1.25rem;
-$dotColor: $primaryColor;
-$dotActiveColor: $secondaryColor;
+$dotHeight: 0.625rem;
+$dotWidth: 0.625rem;
+$dotActiveHeight: 0.625rem;
+$dotActiveWidth: 1.75rem;
+$dotColor: $secondaryColor;
+$dotActiveColor: $primaryColor;
 
 $arrowHeight: 2rem;
 $arrowWidth: 1.5rem;
-$dotColor: $primaryColor;
-$arrowColor: $primaryColor;
-$arrowActiveColor: $secondaryColor;
+$arrowColor: #000;
+$arrowActiveColor: #000;
 
 
 .flickity-enabled {
@@ -93,7 +88,7 @@ $arrowActiveColor: $secondaryColor;
   // background: $primaryColor;
   background: transparent;
   border: none;
-  color: $primaryColor;
+  color: #000;
 }
 
 .flickity-button:hover {
@@ -107,11 +102,11 @@ $arrowActiveColor: $secondaryColor;
 }
 
 .flickity-button:active {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .flickity-button:disabled {
-  opacity: 0.1;
+  opacity: 0.2;
   cursor: auto;
   /* prevent disabled button from capturing pointer up event. #716 */
   pointer-events: none;
@@ -151,8 +146,8 @@ $arrowActiveColor: $secondaryColor;
   position: absolute;
   left: 20%;
   top: 20%;
-  width: 60%;
-  height: 60%;
+  width: 1.5rem;
+  height: 2rem;
   fill: $arrowColor;
 }
 
@@ -179,9 +174,9 @@ $arrowActiveColor: $secondaryColor;
   width: $dotWidth;
   height: $dotHeight;
   // margin: 0 8px;
-  margin: 0 8px;
+  margin: 0 3px;
   background: $dotColor;
-  border-radius: 50%;
+  border-radius: $dotHeight;
   opacity: 0.8;
   cursor: pointer;
   transition: all .3s;

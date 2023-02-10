@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+
+@use "../utils/variables";
+
+html {
+   box-sizing: border-box;
+}
+ 
+ /**
+   * Make all elements from the DOM inherit from the parent box-sizing
+   * Since `*` has a specificity of 0, it does not override the `html` value
+   * making all elements inheriting from the root box-sizing value
+   * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+   */
+ 
+h1,h2,h3,h4,h5,h6 {
+   letter-spacing: 0.05em;
+}  
+
+img,
+iframe {
+   max-width: 100%
+}
+
+section {
+   margin: 4rem 0;
+   // @media screen and (variables.$lg) {
+   //    margin: 6rem 0;
+   // }
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}

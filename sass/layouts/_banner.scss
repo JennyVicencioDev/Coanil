@@ -1,0 +1,114 @@
+@use "../utils/variables";
+
+.banner-top {
+   &.banner-home {
+      picture img {
+         max-height: 650px;
+      }
+   }
+
+   .banner-bg {
+      img {
+         width: 100%;
+         min-height: 200px;
+         max-height: 500px;
+         object-fit: cover;
+      }
+   } 
+
+   .banner-caption {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      padding: 1rem 0;
+      z-index: 1;
+
+      h1, h2, h3 {
+         color: variables.$white;
+         font-weight: 700;
+         letter-spacing: 0.05em;
+         margin-bottom: 0;
+         font-size: calc(.5rem + 3vw);
+      }
+      p {
+         color: variables.$white;
+         margin-bottom: 0;
+      }
+
+      @media screen and (variables.$lg) {
+         p {
+            font-size: 1.25rem;
+         }
+      }
+      @media screen and (variables.$xxl) {
+         h1, h2, h3 {
+            font-size: 3.5rem;
+         }
+      }
+   }
+
+   // banner no slider
+   &-content {
+      position: relative;
+      width: 100%;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         background: variables.$gradient-banner;
+         z-index: 0;
+      }
+   }
+
+   // banner slider
+   &-slider {
+      .container, 
+      .container-md {
+         position: relative;
+      }
+      .flickity-page-dots {
+         position: absolute;
+         bottom: 0;
+         left: auto;
+         justify-content: flex-start;
+         margin-bottom: 5%;
+
+         .dot {
+            background: rgba(variables.$white, 0.6);
+            &.is-selected {
+               background: variables.$white;
+            }
+         }
+      }
+      
+      .slide {
+         position: relative;
+         width: 100%;
+   
+         &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: variables.$gradient-banner;
+            z-index: 0;
+         }
+      }
+
+      .banner-caption {
+         top: 0;
+         height: calc(95% - 32px);
+         display: flex;
+         align-items: center;
+         transform: none;
+      }
+   }
+}

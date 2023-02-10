@@ -43,7 +43,9 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !defau
 $utilities-border: map-merge(
   $utilities-colors,
   (
-    "white": to-rgb($white)
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-bg)
   )
 ) !default;
 $utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border") !default;

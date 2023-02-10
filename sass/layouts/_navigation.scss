@@ -31,6 +31,7 @@
 	.navigation-links {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 	
 		a:not(:last-child) {
 			margin-right: 2rem;
@@ -236,7 +237,6 @@
 		display: none;
 	}
 }
-
 
 .comment-navigation,
 .posts-navigation,

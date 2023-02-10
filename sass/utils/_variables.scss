@@ -1,5 +1,5 @@
 // Paleta de colores Coanil:
-$blue: #005D9F;
+$blue: #0655CD;
 $light-blue: #009EE3;
 $green: #386539;
 $light-green: #A2C037;
@@ -12,12 +12,13 @@ $dark-fuchsia: #A9004C;
 $purple: #65477C;
 $light-purple: #AA81CB;
 $link: #009DE0;
-$text: #585858;
+$text: #393939;
 
-// $gradient: linear-gradient(90deg, $blue 19.55%, $light-blue 80.65%);
+$gradient: linear-gradient(90.9deg, $blue 28.35%, #0377D6 53.88%, $link 70.62%);
+$gradient-banner: linear-gradient(89.62deg, $blue 24.27%, rgba($blue, 0.6) 43.58%, rgba(6, 85, 205, 0.0208333) 60.5%, rgba(6, 85, 205, 0) 81.29%);
 
 $white: #fff;
-$black: #fff;
+$black: #000;
 $body-text: $text;
 $body-bg: #fff;
 

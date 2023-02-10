@@ -1,13 +1,18 @@
-// $border-width:                1px;
-// $border-style:                solid;
-// $border-color:                $gray-300;
+$border-width:                1px;
+$border-style:                solid;
+$border-color:                $text;
 // $border-color-translucent:    rgba($black, .175);
-// $border-radius:               .375rem;
-// $border-radius-sm:            .25rem;
-// $border-radius-lg:            .5rem;
-// $border-radius-xl:            1rem;
-// $border-radius-2xl:           2rem;
-// $border-radius-pill:          50rem;
+$border-radius:               50px;
+$border-radius-sm:            20px;
+$border-radius-lg:            60px;
+$border-radius-xl:            80px;
+$border-radius-2xl:           100px;
+$border-radius-pill:          120px;
+
+$box-shadow:                  0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175);
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075);
 
 // $component-active-color:      $white;
 // $component-active-bg:         $primary;
@@ -20,3 +25,22 @@
 // $transition-fade:             opacity .15s linear;
 // $transition-collapse:         height .35s ease;
 // $transition-collapse-width:   width .35s ease;
+
+// Cards
+// $card-spacer-y:                     $spacer;
+// $card-spacer-x:                     $spacer;
+$card-title-spacer-y:               $spacer * 1.5;
+$card-border-width:                 $border-width;
+// $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
+$card-border-radius:                50px;
+// $card-box-shadow:                   null;
+// $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
+// $card-cap-padding-y:                $card-spacer-y * .5;
+// $card-cap-padding-x:                $card-spacer-x;
+// $card-cap-bg:                       rgba($black, .03);
+// $card-cap-color:                    null;
+// $card-height:                       null;
+// $card-color:                        null;
+// $card-bg:                           $white;
+// $card-img-overlay-padding:          $spacer;
+// $card-group-margin:                 $grid-gutter-width * .5;

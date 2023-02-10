@@ -138,6 +138,7 @@ $utilities: map-merge(
       )
     ),
     "border-color": (
+      responsive: true,
       property: border-color,
       class: border,
       local-vars: (

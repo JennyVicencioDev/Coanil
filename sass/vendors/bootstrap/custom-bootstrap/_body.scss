@@ -16,8 +16,23 @@
 // $enable-deprecation-messages: true;
 // $enable-important-utilities:  true;
 
+// Prefix for :root CSS variables
+$variable-prefix:             bscoanil-; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
+
 // Body
-$body-color: #585858;
+$body-color: #393939;
 $body-bg: #fff;
 // $body-text-align: left;
 
@@ -37,3 +52,15 @@ $link-hover-decoration:                   underline;
 //   xl: 1200px,
 //   xxl: 1400px
 // );
+
+// Grid containers
+//
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1200px
+);
+
+$text-muted:                  $gray-500;
