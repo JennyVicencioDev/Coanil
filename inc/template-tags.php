@@ -97,7 +97,7 @@ if ( ! function_exists( 'wp_base_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'coanil' ),
+					__( 'Editar <span class="screen-reader-text">%s</span>', 'coanil' ),
 					array(
 						'span' => array(
 							'class' => array(),

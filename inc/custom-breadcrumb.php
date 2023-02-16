@@ -6,7 +6,7 @@
 function custom_breadcrumbs() {
 
 	/* === OPTIONS === */
-	$text['home']     = 'Home'; // text for the 'Home' link
+	$text['home']     = get_option('page_on_front') ==! '0' ? get_the_title(get_option('page_on_front')) : 'Inicio'; // text for the 'Home' link
 	$text['category'] = 'Archive by Category "%s"'; // text for a category page
 	$text['search']   = 'Search Results for "%s" Query'; // text for a search results page
 	$text['tag']      = 'Posts Tagged "%s"'; // text for a tag page
@@ -15,11 +15,11 @@ function custom_breadcrumbs() {
 	$text['page']     = 'Page %s'; // text 'Page N'
 	$text['cpage']    = 'Comment Page %s'; // text 'Comment Page N'
 
-	$wrap_before    = '<div class="breadcrumb itemscope mb-0" style="width: fit-content;">'; // the opening wrapper tag
-	$wrap_after     = '</div>'; // the closing wrapper tag
+	$wrap_before    = '<div class="breadcrumb itemscope"><div class="d-flex container">'; // the opening wrapper tag
+	$wrap_after     = '</div></div>'; // the closing wrapper tag
 	//$sep            = '<span class="breadcrumb__separator mx-2"> / </span>'; // separator between crumbs
 	$sep            = null; // separator between crumbs
-	$before         = '<span class="breadcrumb-item active fw-bold" aria-current="page">'; // tag before the current crumb
+	$before         = '<span class="breadcrumb-item active fw-semibold" aria-current="page">'; // tag before the current crumb
 	$after          = '</span>'; // tag after the current crumb
 
 	$show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
@@ -31,7 +31,7 @@ function custom_breadcrumbs() {
 	global $post;
 	$home_url       = home_url('/');
 	$link           = '<span class="breadcrumb-item">';
-	$link          .= '<a class="breadcrumb-item text-dark text-decoration-none" href="%1$s" itemprop="item"><span itemprop="name">%2$s</span></a>';
+	$link          .= '<a class="breadcrumb-item text-body" href="%1$s" itemprop="item"><span itemprop="name">%2$s</span></a>';
 	$link          .= '<meta itemprop="position" content="%3$s" />';
 	$link          .= '</span>';
 	$parent_id      = ( $post ) ? $post->post_parent : '';
