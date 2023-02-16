@@ -12,19 +12,18 @@
 @import "variables";
 
 // Include any default variable overrides here
-@import "custom-bootstrap/colors";
-@import "custom-bootstrap/body";
-@import "custom-bootstrap/buttons-forms";
-@import "custom-bootstrap/typography";
-@import "custom-bootstrap/components";
-@import "custom-bootstrap/tables";
-
-// Include any default map overrides here
+@import "variables-overrides";
 
 // Include remainder of required parts
 @import "maps";
 @import "mixins";
 @import "root";
+
+// Include any default map overrides here
+// Custom-theme-colors mapping
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$theme-colors: map-merge($theme-colors, $bn-theme-colors);
 
 // Include any optional Bootstrap CSS as needed
 @import "utilities";
@@ -61,32 +60,6 @@
 //           ( $all-colors ),
 //         ),
 //       ),
-//     ),
-//   )
-// );
-
-// This will generate .border-{breakpoint}-{position}
-// $utilities: map-merge(
-//   $utilities, (
-//     "border": map-merge(
-//       map-get($utilities, "border"),
-//       ( responsive: true ),
-//     ),
-//     "border-top": map-merge(
-//       map-get($utilities, "border-top"),
-//       ( responsive: true ),
-//     ),
-//     "border-end": map-merge(
-//       map-get($utilities, "border-end"),
-//       ( responsive: true ),
-//     ),
-//     "border-bottom": map-merge(
-//       map-get($utilities, "border-bottom"),
-//       ( responsive: true ),
-//     ),
-//     "border-start": map-merge(
-//       map-get($utilities, "border-start"),
-//       ( responsive: true ),
 //     ),
 //   )
 // );
