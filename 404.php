@@ -12,47 +12,18 @@ get_header();
 
 	<main id="main-content" class="site-main">
 
-		<section class="error-404 not-found">
+		<section class="error-404 not-found py-5 my-0">
 			<div class="container">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'coanil' ); ?></h1>
-				</header><!-- .page-header -->
-	
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'coanil' ); ?></p>
-	
-						<?php
-						get_search_form();
-	
-						the_widget( 'WP_Widget_Recent_Posts' );
-						?>
-	
-						<div class="widget widget_categories">
-							<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'coanil' ); ?></h2>
-							<ul>
-								<?php
-								wp_list_categories(
-									array(
-										'orderby'    => 'count',
-										'order'      => 'DESC',
-										'show_count' => 1,
-										'title_li'   => '',
-										'number'     => 10,
-									)
-								);
-								?>
-							</ul>
-						</div><!-- .widget -->
-	
-						<?php
-						/* translators: %1$s: smiley */
-						$wp_base_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'coanil' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wp_base_archive_content" );
-	
-						the_widget( 'WP_Widget_Tag_Cloud' );
-						?>
-	
-				</div><!-- .page-content -->
+				<div class="text-center">
+					<span class="h1 text-secondary fw-bold">404</span>
+					<h1 class="page-title mt-5">¡Oops!<br>No hemos encontrado esta página</h1>
+					<div class="img-deco py-4">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vector-arrow-down-fuchsia.svg" class="img-fluid" alt="arrow down">
+					</div>
+					<div class="mt-5">
+						<a href="<?php echo get_home_url(); ?>/" type="button" class="btn btn-secondary">Volver al inicio</a>
+					</div>
+				</div>
 			</div>
 		</section><!-- .error-404 -->
 

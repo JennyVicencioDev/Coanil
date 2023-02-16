@@ -1,0 +1,56 @@
+@use "../utils/variables";
+
+// error 404
+.error-404 {
+   background-image: url(./img/vectors/vector-waves-404.svg);
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: auto 100%;
+
+   .container {
+      position: relative;
+   }
+
+   .img-deco {
+      width: 60%;
+      max-width: 500px;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   @media screen and (variables.$lg) {
+      .img-deco {
+         left: 10%;
+         width: 50%;
+      }
+   }
+}
+
+// mensaje gracias
+.msj-gracias {
+   background-image: url(./img/gracias-img.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   color: variables.$white;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: variables.$gradient;
+      opacity: 0.5;
+   }
+
+   .container {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+   }
+}
