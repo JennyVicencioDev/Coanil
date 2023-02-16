@@ -3,8 +3,7 @@
 .datos-coanil {
 
    .dato { 
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
+      padding: 2rem 0;
 
       &-icono {
          position: relative;
@@ -37,33 +36,33 @@
       &-texto {
          color: variables.$primary;
          line-height: 1.25;
-         padding: 0 2rem 2rem;
+         padding: 0 2rem;
 
          &-numero {
-            font-size: 3.5rem;
+            // font-size: 3.5rem;
             font-weight: 700;
             text-align: center;
             margin-top: 2.5rem;
          }
          &-nombre {
-            font-size: 1.5rem;
+            // font-size: 1.5rem;
             font-weight: 600;
             text-align: center;
    
             &-desc {
                color: variables.$text;
                display: block;
-               font-size: 1.25rem;
+               // font-size: 1.25rem;
                font-weight: 400;
-               margin-top: 2.5rem;
+               margin-top: 2rem;
             }
          }
       }
    }
    & .row > div {
       &:not(:last-child) {
-         .dato-texto {
-            border-bottom: 2px solid rgba(variables.$text, 0.5);
+         .dato {
+            border-bottom: 1px solid rgba(variables.$text, 0.5);
          }
       }
    }
@@ -71,6 +70,12 @@
    
    @media screen and (variables.$sm) {
       & .row > div {
+         &:not(:last-child) {
+         .dato {
+            border-bottom: none;
+         }
+      }
+
          .dato-texto {
             border-bottom: none!important;
             padding: 0 2rem;
@@ -78,11 +83,10 @@
 
          &:nth-child(odd) {
             .dato-texto {
-               border-right: 2px solid rgba(variables.$text, 0.5);
+               border-right: 1px solid rgba(variables.$text, 0.5);
             }
          }
       }
-
    }
 
    @media screen and (variables.$xl) {
@@ -94,7 +98,7 @@
       & .row > div {
          &:not(:last-child) {
             .dato-texto {
-               border-right: 2px solid rgba(variables.$text, 0.5);
+               border-right: 1px solid rgba(variables.$text, 0.5);
             }
          }
       }
@@ -102,11 +106,10 @@
 }
 
 .areas-cards-container {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(280px, 560px));
-   gap: 5rem 1.5rem;
-   place-content: center;
-   place-items: center;
+   &:after {
+      content: 'flickity';
+      display: none; /* hide :after */
+    }
 
    .card-area {
       &:nth-child(1) {
@@ -159,8 +162,23 @@
       }
    }
 
+   .flickity-page-dots .dot {
+      background: rgba(variables.$white, 0.3);
+      &.is-selected {
+         background: variables.$white;
+      }
+   }
+
    @media screen and (variables.$xl) {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 5rem 1.5rem;
+      place-content: center;
+      place-items: center;
+
+      &:after {
+         content: '';
+      }
    }
 }
 
@@ -211,27 +229,20 @@
    }
 }
 
-.img-deco {
-   position: relative;
+// .img-deco {
+//    #instagram-feed & {
+//        img {
+//          left: 10%;
+//          width: 40%;
+//        }
+//    }
 
-   #instagram-feed & {
-       img {
-         left: 0;
-
-         @media screen and (variables.$md) {
-            left: 8rem;
-         }
-       }
-   }
-
-   #newsletter & {
-      img {
-         height: auto;
-         width: 120px;
-         transform: rotate(-15deg);
-
-        @media screen and (variables.$md) {
-        }
-      }
-  }
-}
+//    #newsletter & {
+//       img {
+//          height: auto;
+//          width: 20%;
+//          max-width: 120px;
+//          transform: rotate(-15deg);
+//       }
+//   }
+// }
