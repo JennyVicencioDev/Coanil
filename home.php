@@ -38,18 +38,14 @@ get_header();
 
          </div>
       </div>
-      <div class="postbanner-links">
-         <a href="<?php echo get_home_url(); ?>/hazte-socio" class="btn btn-sm btn-outline-secondary">Hazte socio</a>
-         <a href="<?php echo get_home_url(); ?>/donar" class="btn btn-sm btn-secondary">Quiero donar</a>
-      </div>
 
       <section id="introduccion">
          <div class="container">
-            <div class="text-center mx-lg-5 px-lg-5 mb-5">
+            <div class="text-start text-lg-center mx-lg-6">
                <h2>Un espacio seguro para el bienestar <br>y <span class="fw-bold">la integración social</span></h2>
                <p class="fs-6">En Fundación Coanil apoyamos y brindamos herramientas para el desarrollo de personas con discapacidad intelectual en Chile para promover su crecimiento educativo y profesional.</p>
             </div>
-            <div class="datos-coanil">
+            <div class="datos-coanil-container">
                <div class="row g-0">
                   <div class="col-12 col-sm-6 col-xl-3">
                      <div class="dato">

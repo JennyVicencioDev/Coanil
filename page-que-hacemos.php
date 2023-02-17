@@ -36,17 +36,12 @@ get_header();
       </div>
 		
 		<?php include('template-parts/breadcrumb.php'); ?>
-		
-		<div class="postbanner-links">
-         <a href="<?php echo get_home_url(); ?>/hazte-socio" class="btn btn-sm btn-outline-secondary">Hazte socio</a>
-         <a href="<?php echo get_home_url(); ?>/donar" class="btn btn-sm btn-secondary">Quiero donar</a>
-      </div>
 
 		<section id="introduccion">
          <div class="container">
-            <div class="text-center mx-lg-5 px-lg-5">
+            <div class="text-start text-lg-center mx-lg-6">
 					<h2>Responsabilidad y dedicación <br><b>por la inclusión</b></h2>
-               <p class="fs-6">Nuestra gestión está enfocada en mejorar la calidad de vida de la personas con discapacidad intelectual, trabajando en las áreas de educación, protección y de inserción laboral. Reconocemos estas necesidades y potenciamos la autonomía e inclusión social en todos los niveles.</p>
+               <p class="fs-6 fs-lg">Nuestra gestión está enfocada en mejorar la calidad de vida de la personas con discapacidad intelectual, trabajando en las áreas de educación, protección y de inserción laboral. Reconocemos estas necesidades y potenciamos la autonomía e inclusión social en todos los niveles.</p>
             </div>
          </div>
       </section>

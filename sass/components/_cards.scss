@@ -3,7 +3,7 @@
 .card-area {
    border: 0;
    height: auto;
-   max-width: 100%;
+   width: 100%;
    overflow: hidden;
 
    .card-title {
@@ -15,15 +15,15 @@
       top: 0;
       left: 0;
       height: 100%;
-      width: 170px;
+      width: 120px;
       
       &::before {
          content: '';
          position: absolute;
-         left: 1rem;
+         left: .5rem;
          top: 0;
          background-image: url(./img/areas/mask-card-area-blue.svg);
-         background-repeat: no-repeat;
+         background-repeat: repeat-y;
          height: 100%;
          width: 100%;
          z-index: 0;
@@ -54,15 +54,24 @@
    .card-body {      
       display: flex;
       flex-direction: column;
-      padding: 2rem 2rem 2rem 13rem;
+      padding: 2rem 1rem 2rem 9rem;
+      text-align: center;
    }
-
+   
    p {
-      font-size: 1.125rem;
+      margin-bottom: 2rem;
    }
-
+   
    @media screen and (variables.$md) {
-      height: 390px;
-      width: 560px;
+      min-height: 380px;
+      max-width: 560px;
+
+      p {
+         font-size: 1.125rem;
+      }
+
+      .card-body {
+         text-align: left;
+      }
    }
 }

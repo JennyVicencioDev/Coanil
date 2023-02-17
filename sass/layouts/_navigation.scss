@@ -3,22 +3,27 @@
 .site-header {
 	background: variables.$white;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	padding: 1.25rem 0;
+	position: relative;
 }
 
 .site-branding {
 	display: inline-block;
 	vertical-align: middle;
-	max-width: 160px;
-	width: 100%;
 	height: auto;
+	width: 100%;
+	padding: .5rem;
+	text-align: center;
 	img, .custom-logo {
-		width: 100%;
+		max-width: 120px;
 		height: auto;
 	}
 
 	@media screen and (variables.$lg) {
 		width: 20%;
+		padding: 1.5rem .5rem;
+		img, .custom-logo {
+			max-width: 160px;
+		}
 	}
 }
 
@@ -26,33 +31,66 @@
 	display: inline-block;
 	vertical-align: middle;
 	width: 100%;
-	margin-top: 1rem;
 
 	.navigation-links {
 		display: flex;
-		justify-content: center;
+		gap: 1rem;
 		flex-wrap: wrap;
-	
-		a:not(:last-child) {
-			margin-right: 2rem;
-		}
+		margin-top: 1rem;
 	}
+	
 	@media screen and (variables.$lg) {
 		width: 80%;
-		margin-top: 0;
 
 		.navigation-links {
+			display: flex;
 			justify-content: flex-end;
+			gap: 2rem;
+			margin-top: 1rem;
 		}
 	}
 }
 
 .main-navigation {
+	background: variables.$white;
 	display: block;
 	width: 100%;
 
+	.menu-nav-container {
+		background-color: variables.$white;
+		box-shadow: 0px 4px 4px rgba(variables.$primary, 0.25);
+		position: absolute;
+		top: 0;
+		left: -100%;
+		height: 100vh;
+		width: 100%;
+		max-width: 320px;
+		padding: .5rem 1.25rem;
+		transition: left 0.3s ease-in-out;
+		z-index: 100;
+		.menu-nav-header {
+			position: relative;
+			margin-bottom: 1rem;
+		}
+		.site-branding {			
+			img {
+				padding: 0;
+			}
+		}
+	}
+	.menu-nav-backdrop {
+		background-color: variables.$primary;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		width: 100vw;
+		height: 100vh;
+		opacity: 0;
+		pointer-events: none;
+	}
+
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -60,6 +98,7 @@
 		ul {
 			background-color: variables.$white;
 			margin-top: 0;
+			padding-left: 1rem;
 			width: 100%;
 
 			a {
@@ -79,7 +118,7 @@
 
 		li {
 			position: relative;
-			padding: .5rem 1rem;
+			padding: 0;
 	
 			&:hover > a,
 			&.focus > a {
@@ -91,14 +130,15 @@
 		li.focus > ul {
 			display: block;
 		}
-	}
 
-	a {
-		color: variables.$text;
-		display: block;
-		font-weight: 500;
-		text-decoration: none;
-		white-space: nowrap;
+		a {
+			color: variables.$text;
+			display: block;
+			font-weight: 600;
+			text-decoration: none;
+			white-space: nowrap;
+			padding: .5rem 0;
+		}
 	}
 
 	.current_page_item > a,
@@ -115,9 +155,10 @@
 		flex-wrap: nowrap;
 		ul {
 			background-color: variables.$white;
-			// display: none;
+			display: none;
 			
 			a {
+				color: variables.$primary;
 				margin-right: 0;
 				position: relative;
 			}
@@ -138,19 +179,44 @@
 		}
 	}
 
-	&.toggled ul {
-		display: block;
-		ul {
-			display: none;
+	&.toggled {
+		.menu-nav-container {
+			left: 0;
 		}
-	}
+		.menu-nav-backdrop {
+			opacity: 0.25;
+		}
+
+		ul {
+			display: block;
+			
+			ul {
+				display: none;
+			}
+		}
+	} 
 
 	@media screen and (variables.$lg) {
+		.menu-nav-container {
+			box-shadow: none;
+			position: relative;
+			left: auto;
+			height: auto;
+			// width: auto;
+			max-width: 100%;
+			padding: 0;
+			.menu-nav-header {
+				display: none;
+			}
+		}
+		.menu-nav-backdrop {
+			display: none;
+		}
+
 		ul {
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-end;
-			margin-top: 1.25rem;
 			
 			ul {
 				box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -160,9 +226,10 @@
 				top: 100%;
 				left: -999em;
 				opacity: 0;
+				padding-left: 0;
 				transition: opacity .2s ease-in-out;
 				width: auto;
-				z-index: 99999;
+				// z-index: 99;
 
 				ul {
 					left: -999em;
@@ -191,15 +258,17 @@
 			}
 
 			li {
-				padding: 0;
+				padding: 1rem 0;
 			}
 
 			li:hover > ul,
 			li.focus > ul {
 				left: auto;
-				top: 100%;
-				transition: opacity .2s ease-in-out;
 				opacity: 1;
+			}
+
+			a {
+				padding: 0;
 			}
 		}
 
@@ -214,16 +283,23 @@
 				margin-left: .5rem;
 				margin-right: 0;
 			}
-		}
 
-		&.toggled ul {
-			display: flex;
-			flex-direction: row;
 			ul {
-				flex-direction: column;
+				a {
+					color: variables.$text;
+				}
 			}
 		}
 
+		&.toggled {
+			ul {
+			  display: flex;
+			  flex-direction: row;
+			  ul {
+				  flex-direction: column;
+			  }
+		  	}
+		}
 	}
 }
 
@@ -232,6 +308,15 @@
 	display: block;
 	background-color: transparent;
 	border: 0;
+	padding: .5rem;
+	position: absolute;
+	top: 50%;
+	right: 1.25rem;
+	transform: translateY(-50%);
+	
+	&.close {
+		right: 0;
+	}
 
 	@media screen and (variables.$lg) {
 		display: none;

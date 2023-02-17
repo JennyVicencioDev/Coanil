@@ -8,10 +8,6 @@
 
 @use "../utils/variables";
 
-html {
-   box-sizing: border-box;
-}
- 
  /**
    * Make all elements from the DOM inherit from the parent box-sizing
    * Since `*` has a specificity of 0, it does not override the `html` value
@@ -29,12 +25,12 @@ iframe {
 }
 
 section {
-   margin: 4rem 0;
-   // @media screen and (variables.$lg) {
-   //    margin: 6rem 0;
-   // }
+   position: relative;
+   margin-top: 3rem;
+   margin-bottom: 3rem;
 
-   &:last-child {
-      margin-bottom: 0;
+   @media screen and (variables.$lg) {
+      margin-top: 6rem;
+      margin-bottom: 6rem;
    }
 }

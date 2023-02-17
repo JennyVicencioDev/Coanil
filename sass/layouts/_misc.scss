@@ -3,8 +3,8 @@
 .diagonal-bottom {
     position: relative;
     // color: variables.$white;
-    padding-bottom: 0rem;
-    margin-bottom: 15rem;
+    padding-bottom: 0rem!important;
+    margin-bottom: 10rem;
 
     &::after {
         content: "";
@@ -17,18 +17,18 @@
         background-repeat: repeat;
         background-position: center;
         width: 100%;
-        height: 15%;
-        max-height: 200px;
+        height: 20%;
+        max-height: 10rem;
         clip-path: polygon(0 0, 0 100%, 100% 0);
         z-index: 1;
     }
 
-    @media screen and (variables.$xl) {
+    @media screen and (variables.$xxl) {
         margin-bottom: 15rem;
         
         &::after {
-            height: 30%;
-            max-height: 300px;
+            height: 35%;
+            max-height: 15rem;
         }
     }
 }
@@ -38,11 +38,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: top;
+    background-position-x: 25%;
+    @media screen and (variables.$xl) {
+        background-position-x: 0;
+        background-size: 100%;
+    }
 }
 
 .row-img-txt {
     .col-img {
       position: relative;
+      z-index: 0;
 
         &::before {
             content: '';
@@ -68,7 +74,8 @@
 
 .img-deco {
     position: relative;
-
+    pointer-events: none;
+    
     img {
         position: relative;
         left: 0;

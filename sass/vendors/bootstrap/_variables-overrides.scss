@@ -164,7 +164,7 @@ $enable-cssgrid:              false;
 $enable-button-pointers:      true;
 $enable-rfs:                  true;
 $enable-validation-icons:     true;
-$enable-negative-margins:     false;
+$enable-negative-margins:     true;
 $enable-deprecation-messages: true;
 $enable-important-utilities:  true;
 
@@ -196,7 +196,7 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
-  6: $spacer * 4, // +1
+  6: $spacer * 6, // +1
 );
 // scss-docs-end spacer-variables-maps
 
@@ -310,11 +310,11 @@ $border-color-translucent:    rgba($black, .175);
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               0.75rem;
-$border-radius-sm:            0.5rem;
-$border-radius-lg:            1rem;
-$border-radius-xl:            2rem;
-$border-radius-2xl:           3rem;
+$border-radius:               2rem;
+$border-radius-sm:            1rem;
+$border-radius-lg:            3rem;
+$border-radius-xl:            3.5rem;
+$border-radius-2xl:           4rem;
 $border-radius-pill:          50rem;
 // scss-docs-end border-radius-variables
 
@@ -389,7 +389,7 @@ $line-height-sm:              1.25;
 $line-height-lg:              2;
 
 $h1-font-size:                $font-size-base * 3.5;
-$h2-font-size:                $font-size-base * 2.75;
+$h2-font-size:                $font-size-base * 2.875;
 $h3-font-size:                $font-size-base * 2.5;
 $h4-font-size:                $font-size-base * 2;
 $h5-font-size:                $font-size-base * 1.5;
@@ -550,7 +550,7 @@ $input-btn-focus-blur:          0;
 $input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
 
 $input-btn-padding-y-sm:      .25rem;
-$input-btn-padding-x-sm:      1rem;
+$input-btn-padding-x-sm:      .5rem;
 $input-btn-font-size-sm:      $font-size-sm;
 
 $input-btn-padding-y-lg:      1rem;
@@ -595,9 +595,9 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
 $btn-link-disabled-color:     $gray-600;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           30px;
-$btn-border-radius-sm:        20px;
-$btn-border-radius-lg:        40px;
+$btn-border-radius:           $border-radius;
+$btn-border-radius-sm:        $border-radius-sm;
+$btn-border-radius-lg:        $border-radius-lg;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
@@ -760,7 +760,7 @@ $form-select-disabled-bg:           $gray-200;
 $form-select-disabled-border-color: $input-disabled-border-color;
 $form-select-bg-position:           right $form-select-padding-x center;
 $form-select-bg-size:               16px 12px; // In pixels because image dimensions
-$form-select-indicator-color:       $gray-800;
+$form-select-indicator-color:       $primary; //gray-800
 $form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding;
@@ -1343,7 +1343,7 @@ $breadcrumb-padding-y:              0;
 $breadcrumb-padding-x:              0;
 $breadcrumb-item-padding-x:         .75rem;
 $breadcrumb-margin-bottom:          0;
-$breadcrumb-bg:                     $light;
+$breadcrumb-bg:                     rgba($light, 0.5);
 $breadcrumb-divider-color:          $gray-600;
 $breadcrumb-active-color:           $primary;
 $breadcrumb-divider:                quote(">");

@@ -15,24 +15,15 @@
 
 		<div class="container">
 			<div class="row py-5">
-				<div class="footer-column logo col-lg-3">
+				<div class="footer-column logo col-lg-3 mb-4 mb-lg-0">
 					<a href="<?php echo get_home_url(); ?>/">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/logos/logo-coanil-white.svg" class="img-fluid" alt="logo Coanil">
 					</a>
 				</div>
 				<div class="footer-column links col-lg-9">
 					<div class="row">
-						<div class="col-lg-3">
+						<div class="col-md-6 col-lg-3">
 							<div class="footer-column-title">Conócenos</div>
-							<ul>
-								<li><a href="<?php echo get_home_url(); ?>/#">Hablemos</a></li>
-								<li><a href="<?php echo get_home_url(); ?>/trabaja-con-nosotros">Trabaja con nosotros</a></li>
-								<li><a href="<?php echo get_home_url(); ?>/#">Portal trabajador</a></li>
-								<li><a href="<?php echo get_home_url(); ?>/denuncias">Denuncias</a></li>
-							</ul>
-						</div>
-						<div class="col-lg-3">
-							<div class="footer-column-title">Contacto</div>
 							<ul>
 								<li><a href="<?php echo get_home_url(); ?>/programas-sociales">Programas sociales</a></li>
 								<li><a href="<?php echo get_home_url(); ?>/insercion-laboral">Inserción laboral</a></li>
@@ -40,18 +31,27 @@
 								<li><a href="<?php echo get_home_url(); ?>/capacitaciones-otec">Capacitaciones OTEC</a></li>
 							</ul>
 						</div>
-						<div class="col-lg-3">
-							<div class="footer-column-title">Colabora</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-column-title">Contacto</div>
 							<ul>
-								<li><a href="<?php echo get_home_url(); ?>/#">Dona</a></li>
-								<li><a href="<?php echo get_home_url(); ?>/#">Hazte socio</a></li>
+								<li><a href="<?php echo get_home_url(); ?>/#">Consultas</a></li>
+								<li><a href="<?php echo get_home_url(); ?>/trabaja-con-nosotros">Trabaja con nosotros</a></li>
+								<li><a href="<?php echo get_home_url(); ?>/#">Portal trabajador</a></li>
+								<li><a href="<?php echo get_home_url(); ?>/denuncias">Denuncias</a></li>
 							</ul>
 						</div>
-						<div class="col-lg-3">
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-column-title">Colabora</div>
+							<ul>
+								<li><a href="<?php echo get_home_url(); ?>/donar">Dona</a></li>
+								<li><a href="<?php echo get_home_url(); ?>/haste-socio">Hazte socio</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-lg-3">
 							<div class="footer-column-title">Nuestros vínculos</div>
 							<ul>
 								<li><a href="<?php echo get_home_url(); ?>/#">Coanil Educa</a></li>
-								<li><a href="<?php echo get_home_url(); ?>/#">coanil Servicios</a></li>
+								<li><a href="<?php echo get_home_url(); ?>/#">Coanil Servicios</a></li>
 							</ul>
 						</div>
 					</div>

@@ -18,6 +18,7 @@
 }
 
 .footer-column {
+   text-align: center;
 
    &-title {
       // color: variables.$white;
@@ -35,6 +36,8 @@
    }
 
    @media screen and (variables.$lg) {
+      text-align: left;
+      
       &-title {
          margin-top: 0;
       }

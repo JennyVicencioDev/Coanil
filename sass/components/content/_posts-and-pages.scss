@@ -2,6 +2,10 @@
 	display: block;
 }
 
+.site-main {
+   overflow: hidden;
+}
+
 .post,
 .page {
 	// margin: 0 0 1.5em;
@@ -16,10 +20,18 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0;
+	// margin: 1.5em 0;
+	margin: 0;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.edit-link {
+	a {
+		font-size: 1.5rem;  
+		font-weight: 700;
+	}
 }

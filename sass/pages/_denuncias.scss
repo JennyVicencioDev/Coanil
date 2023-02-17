@@ -1,0 +1,11 @@
+@use "../utils/variables";
+
+.denuncias-desc {
+   .col-img {
+      &::before {
+         background-image: url(img/vectors/vector-blue-2.svg);
+         left: 5%;
+         height: 120%;
+      }
+   }
+}

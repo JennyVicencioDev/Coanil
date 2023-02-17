@@ -1,6 +1,23 @@
 $(function () {
    'use strict';
 
+    /* Form con validacion Bootstrap */
+   // enable Bootstrap validation
+   var forms = $('.needs-validation');
+   forms.on('submit', function (event) {
+      event.preventDefault();
+      if (!this.checkValidity()) {
+         $(this).addClass('was-validated');
+         console.log('Formulario no validado.');
+      }
+      else {
+         // $('#modalExito').modal('show');
+         $(this).addClass('submitting');
+         $(this).addClass('was-validated');
+         console.log('Formulario validado con éxito.');
+      }
+   });
+
    /*
     / Flickity
    */
@@ -32,7 +49,7 @@ $(function () {
       on: {
          ready: function() { 
             let dots = this.pageDots.holder;
-            console.log(dots);
+            // console.log(dots);
             $(dots).wrap('<div class="container-md"></div>');
          },
       }
@@ -66,18 +83,21 @@ $(function () {
          }
        }
    }),
-   responsiveSliders = $('.beneficios-cards-container').flickity({
+   responsiveSliders = $('.areas-cards-container').flickity({
       cellAlign: 'center',
       contain: false,
       freeScroll: false,
       prevNextButtons: false,
       watchCSS: true,
-      on: {
-         ready: function() { 
-            let slide = $('.slide', this.$element);
-            slide.css('height', '100%');
-         },
-      }
+      adaptiveHeight: true,
+      // on: {
+      //    ready: function() { 
+      //       let slide = this.slider;
+      //       console.log(slide);
+      //       let slide = $('.slide', this.$element);
+      //       $(slide).children().css('height', '100%');
+      //    },
+      // }
    }),
    autoplaySliders = $('.alianzas-slider').flickity({
       autoPlay: 2000,

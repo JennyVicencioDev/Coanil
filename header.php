@@ -31,50 +31,65 @@
 	<header id="masthead" class="site-header">
 
 		<div class="container">
-			<div class="site-branding">
-				<?php
-				if (has_custom_logo()) : 
-					the_custom_logo();
-				else : ?>
-					<a href="<?php echo get_home_url(); ?>">
-						<img src="<?php echo get_template_directory_uri() ?>/img/logos/logo-coanil.svg" class="img-fluid" alt="">
-					</a>
-				<?php endif; ?>
-			</div>
-		
-			<nav class="site-navigation">
-				<div class="navigation-links">
-					<a href="#" class="btn px-3">Contacto</a>
-					<a href="#" class="btn btn-outline-secondary">Hazte socio</a>
-					<a href="#" class="btn btn-secondary">Quiero donar</a>
+			<div class="row">
+				<div class="site-branding">
+					<?php
+					if (has_custom_logo()) : 
+						the_custom_logo();
+					else : ?>
+						<a href="<?php echo get_home_url(); ?>">
+							<img src="<?php echo get_template_directory_uri() ?>/img/logos/logo-coanil.svg" class="img-fluid" alt="">
+						</a>
+					<?php endif; ?>
 				</div>
-				<div class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M11 20H29" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M11 14H29" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M11 26H29" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</button>
-					
-					<div class="menu-nav-container">
-						<button class="menu-toggle close" aria-controls="menu-nav" aria-expanded="true">
-							<svg xmlns="http://www.w3.org/2000/svg" width="33" height="31" fill="none" viewBox="0 0 33 31">
-								<path stroke="#000" stroke-width="4" d="M1.814 2.108L29.22 29.514M1.814 29.514L30.933 2.108"/>
+				<nav class="site-navigation">
+					<div class="navigation-links d-none d-lg-flex">
+						<a href="<?php echo get_home_url(); ?>/contacto" class="btn fw-normal px-3">Contacto</a>
+						<a href="<?php echo get_home_url(); ?>/hazte-socio" class="btn btn-outline-secondary">Hazte socio</a>
+						<a href="<?php echo get_home_url(); ?>/donar" class="btn btn-secondary">Quiero donar</a>
+					</div>
+					<div class="main-navigation">	
+						<button class="menu-toggle" aria-controls="menu-nav" aria-expanded="false">
+							<svg width="16" height="16" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 0H16V2H0V0ZM0 5H16V7H0V5ZM0 10H16V12H0V10Z" fill="#005D9F" />
 							</svg>
 						</button>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-navbar',
-								'menu_id'        => 'menu-nav',
-								'container' 		=> false
-							)
-						);
-						?>
+						<div class="menu-nav-container">
+							<div class="menu-nav-header">
+								<div class="site-branding p-0">
+									<?php
+									if (has_custom_logo()) : 
+										the_custom_logo();
+									else : ?>
+										<a href="<?php echo get_home_url(); ?>">
+											<img src="<?php echo get_template_directory_uri() ?>/img/logos/logo-coanil.svg" class="img-fluid" alt="">
+										</a>
+									<?php endif; ?>
+								</div>
+								<button class="menu-toggle close" aria-controls="menu-nav" aria-expanded="true">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 33 31">
+										<path stroke="#005D9F" stroke-width="2" d="M1.814 2.108L29.22 29.514M1.814 29.514L30.933 2.108"/>
+									</svg>
+								</button>
+							</div>
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-navbar',
+									'menu_id'        => 'menu-nav',
+									'container' 		=> false
+								)
+							);
+							?>
+							<div class="navigation-links d-lg-none">
+								<a href="<?php echo get_home_url(); ?>/hazte-socio" class="btn btn-sm btn-outline-secondary">Hazte socio</a>
+								<a href="<?php echo get_home_url(); ?>/donar" class="btn btn-sm btn-secondary">Quiero donar</a>
+							</div>
+						</div>
+						<div class="menu-nav-backdrop"></div>
 					</div>
-				</div>
-			</nav>
+				</nav>
+			</div>
 		</div>
 		
 	</header>
