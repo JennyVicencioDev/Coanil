@@ -117,7 +117,7 @@ $(function () {
          }
          }
    }),
-   responsiveSliders = $('.areas-cards-container').flickity({
+   responsiveSliders = $('.areas-cards-container, .ofertas-container').flickity({
       cellAlign: 'center',
       contain: false,
       freeScroll: false,

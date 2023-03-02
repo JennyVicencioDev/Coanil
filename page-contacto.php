@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-test
+
 	<main id="main-content" class="site-main">
 
 		<div class="banner-top" role="banner">
@@ -156,6 +156,20 @@ test
 				<div class="text-start text-lg-center mx-lg-6">
 					<h2>Trabaja con nosotros</h2>
 					<p class="fs-6">Tu labor es esencial para nosotros y para los que más lo necesitan.<br> Postula en Fundación Coanil y sé parte del cambio.</p>
+				</div>
+				<div class="ofertas-container pt-5">
+					<?php for ($i=1; $i<=6 ; $i++) { ?>
+						<div class="card card-oferta me-4 me-xl-0">
+							<div class="card-body">
+								<p class="card-oferta-ubicacion">Comuna/Región <br>San Joaquín; Región Metropolitana</p>
+								<h4 class="card-oferta-titulo h5">Neurólogo infanto juvenil con disponibilidad de 4 horas semanales</h4>
+								<p class="card-oferta-unidad">Unidad / Las Azucenas</p>
+								<p class="card-oferta-horas">Horas semanales / 4 hrs.</p>
+								<div class="mt-auto"><a class="btn btn-white" href="#" role="button">Postula</a></div>
+
+							</div>
+						</div>
+					<?php } ?>
 				</div>
          </div>
 		</section>
