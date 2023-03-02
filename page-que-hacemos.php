@@ -12,12 +12,12 @@ get_header();
 
 	<main id="main-content" class="site-main">
 
-		<div id="hero" class="banner-top" role="banner">
+		<div class="banner-top" role="banner">
 			<div class="banner-top-content">
 				<div class="banner-bg">
 					<picture>
-						<source srcset="<?php echo get_template_directory_uri(); ?>/img/header-nosotros-img.jpg" class="img-fluid" media="(min-width: 992px)">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/header-nosotros-img.jpg" class="img-fluid" alt="banner nosotros">
+						<source srcset="<?php echo get_template_directory_uri(); ?>/img/header-quehacemos-img.jpg" class="img-fluid" media="(min-width: 992px)">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/header-quehacemos-img.jpg" class="img-fluid" alt="banner qué hacemos">
 					</picture>
 				</div>
 				<div class="banner-caption">
