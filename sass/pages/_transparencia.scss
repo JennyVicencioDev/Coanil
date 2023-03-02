@@ -29,13 +29,13 @@ ul.dd-list {
   display: flex;
   gap: 1rem;
   overflow-x: scroll;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   white-space: nowrap;
 
   .balance {
     background-color: variables.$white;
     border-radius: 10px;
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
     display: inline-block;
     padding: 1.25rem 1rem;
     text-align: center;

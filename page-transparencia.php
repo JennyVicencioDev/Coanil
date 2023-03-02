@@ -12,12 +12,12 @@ get_header();
 
 	<main id="main-content" class="site-main">
 
-		<div id="hero" class="banner-top" role="banner">
+		<div class="banner-top" role="banner">
 			<div class="banner-top-content">
 				<div class="banner-bg">
 					<picture>
 						<source srcset="<?php echo get_template_directory_uri(); ?>/img/header-transparencia-img.jpg" class="img-fluid" media="(min-width: 992px)">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/header-transparencia-img.jpg" class="img-fluid" alt="banner nosotros">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/header-transparencia-img.jpg" class="img-fluid" alt="banner transparencia">
 					</picture>
 				</div>
 				<div class="banner-caption">
@@ -78,10 +78,10 @@ get_header();
 			</div>
       </section>
 
-		<section id="fecus" class="t-fecus text-white bg-gradient diagonal-bottom pt-5 py-lg-6">
+		<section id="fecus" class="t-fecus text-white bg-gradient diagonal-bottom py-5 py-lg-6">
 			<div class="container">
-				<div class="row flex-row-lg-reverse row-img-txt align-items-center">
-					<div class="col-12 col-lg-6 col-img mb-5 mb-lg-0">
+				<div class="row flex-lg-row-reverse row-img-txt align-items-center">
+					<div class="col-12 col-lg-6 col-img my-5 my-lg-0">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/transparencia-fecu.jpg" class="img-fluid" alt="fecu social">
 					</div>
 					<div class="col-12 col-lg-6">
@@ -148,11 +148,11 @@ get_header();
 				</div>
 			</div>
 		</section>
-
+		
 		<section id="documentos" class="bg-light py-5 py-lg-6 mb-0" style="--bscoanil-bg-opacity: 0.4;">
 			<div class="container">
-				<div class="row flex-row-lg-reverse row-img-txt align-items-center">
-					<div class="col-12 col-lg-6 col-img mb-5 mb-lg-0">
+				<div class="row flex-lg-row-reverse row-img-txt align-items-center">
+					<div class="col-12 col-lg-6 col-img my-5 my-lg-0">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/transparencia-docs.jpg" class="img-fluid" alt="documentos">
 					</div>
 					<div class="col-12 col-lg-6">
