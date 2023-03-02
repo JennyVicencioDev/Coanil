@@ -15,10 +15,27 @@
 
 		<div class="container">
 			<div class="row py-5">
-				<div class="footer-column logo col-lg-3 mb-4 mb-lg-0">
+				<div class="footer-column logo col-lg-3">
 					<a href="<?php echo get_home_url(); ?>/">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/logos/logo-coanil-white.svg" class="img-fluid" alt="logo Coanil">
 					</a>
+					<ul class="list-group list-group-horizontal justify-content-center justify-content-lg-end py-3">
+						<li>
+							<a href="#" target="_blank" rel="noopener noreferrer">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/i-fb.svg" class="img-fluid" alt="logo red social">
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" rel="noopener noreferrer">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/i-ig.svg" class="img-fluid" alt="logo red social">
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" rel="noopener noreferrer">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/i-yt.svg" class="img-fluid" alt="logo red social">
+							</a>
+						</li>
+					</ul>
 				</div>
 				<div class="footer-column links col-lg-9">
 					<div class="row">

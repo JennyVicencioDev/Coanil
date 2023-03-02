@@ -82,8 +82,8 @@
 							);
 							?>
 							<div class="navigation-links d-lg-none">
-								<a href="<?php echo get_home_url(); ?>/hazte-socio" class="btn btn-sm btn-outline-secondary">Hazte socio</a>
-								<a href="<?php echo get_home_url(); ?>/donar" class="btn btn-sm btn-secondary">Quiero donar</a>
+								<a href="<?php echo get_home_url(); ?>/hazte-socio" class="btn btn-sm btn-outline-secondary px-3">Hazte socio</a>
+								<a href="<?php echo get_home_url(); ?>/donar" class="btn btn-sm btn-secondary px-3">Quiero donar</a>
 							</div>
 						</div>
 						<div class="menu-nav-backdrop"></div>

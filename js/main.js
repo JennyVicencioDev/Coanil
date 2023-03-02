@@ -1,9 +1,12 @@
 $(function () {
    'use strict';
 
-    /* Form con validacion Bootstrap */
-   // enable Bootstrap validation
-   var forms = $('.needs-validation');
+   /*
+    / Funciones
+   */
+
+   // Form con validación Bootstrap
+   var forms = $('.needs-validation');   
    forms.on('submit', function (event) {
       event.preventDefault();
       if (!this.checkValidity()) {
@@ -17,6 +20,38 @@ $(function () {
          console.log('Formulario validado con éxito.');
       }
    });
+
+   // Windows size check
+   const checkingWindowSize = () => {
+      let minWidth = 768; // tamaño min
+      // console.log(`Ancho actual de la pantalla: ${window.innerWidth}px`);
+      return {
+         is_desktop: () => window.matchMedia(`(min-width: ${minWidth}px)`).matches,
+         is_mobile: () => !window.matchMedia(`(min-width: ${minWidth}px)`).matches
+      };
+   };
+
+
+   // footer links collapsible (mobile)
+   const activateFooterCollapse = () => {
+      var footerT = $('.site-footer .links').find('.footer-column-title');
+      $(footerT).each(function (i, colTitle) {
+         if(checkingWindowSize().is_mobile()) {
+            $(colTitle).attr('data-bs-toggle','collapse').attr('data-bs-target','#fl-'+i).addClass('accordion-button');
+            $(colTitle).siblings('ul').attr('id','fl-'+i).addClass('collapse');
+         }
+         else {
+            $(colTitle).removeAttr('data-bs-toggle').removeAttr('data-bs-target').removeClass('accordion-button');
+            $(colTitle).siblings('ul').removeAttr('id').removeClass('collapse');
+         }
+      });
+   };
+   activateFooterCollapse();
+   
+   $(window).on('resize', function(){
+      activateFooterCollapse();
+   });
+
 
    /*
     / Flickity
@@ -34,7 +69,6 @@ $(function () {
    tabsButtons.on('show.bs.tab shown.bs.tab', function (event) {
       window.dispatchEvent(new Event('resize'));
    });
-});
 
    // sliders
    var bannerTop = $('.banner-top-slider').flickity({
@@ -81,7 +115,7 @@ $(function () {
                dots.hide();
             } 
          }
-       }
+         }
    }),
    responsiveSliders = $('.areas-cards-container').flickity({
       cellAlign: 'center',
@@ -110,3 +144,4 @@ $(function () {
       setGallerySize: true,
       fade: true,
    });
+});
