@@ -86,8 +86,8 @@ $colors: (
   "dark-yellow":  $dark-yellow,
   "green":        $green,
   "light-green":  $light-green,
-  // "black":        $black,
-  // "white":        $white,
+  "black":        $black,
+  "white":        $white,
   "gray":         $gray-400,
   "gray-dark":    $gray-800,
 );
@@ -105,13 +105,13 @@ $color-contrast-light:     $light-blue;
 // scss-docs-start theme-color-variables
 $primary:     $blue;
 $secondary:   $fuchsia;
-$success:     $light-green;
+$success:     #10b418;
 $info:        $light-blue;
 $link:        $link;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-900;
+$warning:     $yellow;
+$danger:      #d82033;
+$light:       $gray-100;
+$dark:        $gray-900;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -543,10 +543,10 @@ $input-btn-font-family:       null;
 $input-btn-font-size:         $font-size-base;
 $input-btn-line-height:       $line-height-base;
 
-$input-btn-focus-width:         .25rem;
-$input-btn-focus-color-opacity: .25;
+$input-btn-focus-width:         0.15rem;
+$input-btn-focus-color-opacity: .5;
 $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity);
-$input-btn-focus-blur:          0;
+$input-btn-focus-blur:          0.15rem;
 $input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
 
 $input-btn-padding-y-sm:      .25rem;
@@ -741,7 +741,7 @@ $input-group-addon-padding-y:           $input-padding-y;
 $input-group-addon-padding-x:           $input-padding-x;
 $input-group-addon-font-weight:         $input-font-weight;
 $input-group-addon-color:               $input-color;
-$input-group-addon-bg:                  $gray-200;
+$input-group-addon-bg:                  $light;
 $input-group-addon-border-color:        $input-border-color;
 // scss-docs-end input-group-variables
 
@@ -1078,8 +1078,8 @@ $card-group-margin:                 $grid-gutter-width * .5;
 // scss-docs-start accordion-variables
 $accordion-padding-y:                     1.5rem;
 $accordion-padding-x:                     10%;
-$accordion-color:                         $body-color; // Sass variable because of $accordion-button-icon
-$accordion-bg:                            $white;
+$accordion-color:                         $white; // Sass variable because of $accordion-button-icon
+$accordion-bg:                            $blue;
 $accordion-border-width:                  $border-width;
 $accordion-border-color:                  var(--#{$prefix}border-color-translucent);
 $accordion-border-radius:                 0.75rem;
@@ -1093,7 +1093,7 @@ $accordion-button-padding-x:              $accordion-padding-x;
 $accordion-button-color:                  $white;
 $accordion-button-bg:                     $blue;
 $accordion-transition:                    $btn-transition, border-radius .15s ease;
-$accordion-button-active-bg:              tint-color($primary, 0%);
+$accordion-button-active-bg:              tint-color($blue, 0%);
 $accordion-button-active-color:           $white;
 
 $accordion-button-focus-border-color:     $input-focus-border-color;
