@@ -20,10 +20,10 @@
 @import "root";
 
 // Include any default map overrides here
-// Custom-theme-colors mapping
-$theme-colors: map-merge($theme-colors, $custom-theme-colors);
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
-$theme-colors: map-merge($theme-colors, $bn-theme-colors);
+
+// $utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+// $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+// $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 // Include any optional Bootstrap CSS as needed
 @import "utilities";
@@ -72,6 +72,17 @@ $theme-colors: map-merge($theme-colors, $bn-theme-colors);
 @import "tables";
 @import "forms";
 @import "buttons";
+
+// crea botones blanco y negro
+@each $color, $value in (
+   "white": $white,
+   "black": $black,
+   ) {
+   .btn-#{$color} {
+      @include button-variant($value, $value);
+   }
+}
+
 @import "transitions";
 @import "dropdown";
 @import "button-group";

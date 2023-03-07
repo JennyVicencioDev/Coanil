@@ -24,7 +24,6 @@ get_header();
 					<div class="container-md">
 						<div class="col col-lg-6">
 							<h1>Contacto</h1>
-							<!-- <p></p> -->
 						</div>
 					</div>
 				</div>

@@ -20,9 +20,9 @@ get_header();
 			</div>
       </div>
 
-		<section id="introduccion" class="denuncias-desc">
+		<section id="introduccion">
          <div class="container">
-				<div class="row flex-lg-row-reverse row-img-txt align-items-center justify-content-center">
+				<div class="row flex-lg-row-reverse row-img-txt align-items-center justify-content-center denuncias-desc">
 					<div class="col-12 col-lg-6 col-img my-5 my-lg-0">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/denuncias-img.jpg" class="img-fluid" alt="denuncias">
 					</div>

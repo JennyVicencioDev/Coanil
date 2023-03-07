@@ -1,4 +1,8 @@
 // Paleta de colores Coanil:
+
+$white: #fff;
+$black: #000;
+
 $blue: #0655CD;
 $light-blue: #009EE3;
 $green: #386539;
@@ -9,21 +13,31 @@ $red: #C20E1A;
 $light-red: #E4666E;
 $fuchsia: #CC0F64;
 $dark-fuchsia: #A9004C;
-$purple: #65477C;
-$light-purple: #AA81CB;
+
 $link: #009DE0;
 $text: #393939;
 
-$gradient: linear-gradient(90.9deg, $blue 28.35%, #0377D6 53.88%, $link 70.62%);
-$gradient-banner: linear-gradient(89.62deg, $blue 24.27%, rgba($blue, 0.6) 43.58%, rgba(6, 85, 205, 0.0208333) 60.5%, rgba(6, 85, 205, 0) 81.29%);
+$primary: $blue;
+$secondary: $dark-fuchsia;
 
-$white: #fff;
-$black: #000;
 $body-text: $text;
 $body-bg: #fff;
 
-$primary: $blue;
-$secondary: $dark-fuchsia;
+// gradients
+$gradient: linear-gradient(90.9deg, $blue 28.35%, #0377D6 53.88%, $link 70.62%);
+$gradient-ps: linear-gradient(90.9deg, $blue 28.35%, #0377D6 53.88%, $link 70.62%);
+$gradient-ce: linear-gradient(90.9deg, $dark-yellow 28.35%, $yellow 53.88%, $yellow 70.62%);
+$gradient-pl: linear-gradient(90.9deg, $green 28.35%, $light-green 53.88%, $light-green 70.62%);
+$gradient-otec: linear-gradient(90.9deg, $dark-fuchsia 28.35%, $dark-fuchsia 53.88%, $fuchsia 70.62%);
+
+
+// banner gradients
+$gradient-banner: linear-gradient(89.62deg, $blue 24.27%, rgba($blue, 0.6) 43.58%, rgba(6, 85, 205, 0.0208333) 60.5%, rgba(6, 85, 205, 0) 81.29%);
+$gradient-banner-ps: linear-gradient(89.62deg, $blue 24.27%, rgba($blue, 0.6) 43.58%, rgba(6, 85, 205, 0.0208333) 60.5%, rgba(6, 85, 205, 0) 81.29%);
+$gradient-banner-ce: linear-gradient(89.62deg, $dark-yellow 24.27%, rgba($dark-yellow, 0.6) 43.58%, rgba(6, 85, 205, 0.0208333) 60.5%, rgba(6, 85, 205, 0) 81.29%);
+$gradient-banner-pl: linear-gradient(89.62deg, $green 24.27%, rgba($green, 0.6) 43.58%, rgba(6, 85, 205, 0.0208333) 60.5%, rgba(6, 85, 205, 0) 81.29%);
+$gradient-banner-otec: linear-gradient(89.62deg, $red 24.27%, rgba($red, 0.6) 43.58%, rgba(6, 85, 205, 0.0208333) 60.5%, rgba(6, 85, 205, 0) 81.29%);
+
 
 // breakpoints
 $sm: #{'min-width: 576px'};

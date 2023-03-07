@@ -1,5 +1,6 @@
 @use "../utils/variables";
 
+// fondo corte diagonal inferior
 .diagonal-bottom {
     position: relative;
     // color: variables.$white;
@@ -33,6 +34,7 @@
     }
 }
 
+// fondo ondas grises 
 .bg-waves-light {
     background-image: url(./img/waves-light-bg.png);
     background-repeat: no-repeat;
@@ -45,6 +47,36 @@
     }
 }
 
+// circulo íconos
+.border-circle-clip {
+    position: relative;
+    border-radius: 50%;
+    background-clip: padding-box;
+    border: 8px solid transparent;  
+    background-color: variables.$white;
+    margin: .5rem auto;
+    padding: 2rem;
+    height: 128px;
+    width: 128px;
+    &:before {
+       content: '';
+       position: absolute;
+       top: 0; right: 0; bottom: 0; left: 0;
+       border-radius: inherit;
+       background: radial-gradient(108.18% 1145% at 0% 0%, #0655CD 30%, #009EE3 70%);
+       margin: -.5rem; 
+       z-index: -1;
+    }
+
+    &.yellow {
+        &:before {
+            background: radial-gradient(108.18% 1145% at 0% 0%, variables.$dark-yellow 30%, variables.$yellow 70%);
+
+        }
+    }
+}
+
+// fila con texto e imagen
 .row-img-txt {
     .col-img {
       position: relative;
@@ -72,6 +104,7 @@
     }
 }
 
+// decoraciones de página
 .img-deco {
     position: relative;
     pointer-events: none;

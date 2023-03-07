@@ -1,0 +1,11 @@
+@use "../../utils/variables";
+
+.ce-desc {
+   .col-img {
+      &::before {
+         background-image: url(img/vectors/vector-yellow-2.svg);
+         left: 5%;
+         height: 120%;
+      }
+   }
+}

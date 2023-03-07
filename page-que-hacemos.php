@@ -23,7 +23,7 @@ get_header();
 				<div class="banner-caption">
 					<div class="container-md">
 						<div class="col col-lg-6">
-							<h3>Estamos comprometidos en construir y contribuir</h3>
+							<h1>Estamos comprometidos en construir y contribuir</h1>
 							<p>Con una sociedad más justa e inclusiva para las personas con discapacidad intelectual.</p>
 						</div>
 					</div>
@@ -41,7 +41,7 @@ get_header();
          <div class="container">
             <div class="text-start text-lg-center mx-lg-6">
 					<h2>Responsabilidad y dedicación <br><b>por la inclusión</b></h2>
-               <p class="fs-6 fs-lg">Nuestra gestión está enfocada en mejorar la calidad de vida de la personas con discapacidad intelectual, trabajando en las áreas de educación, protección y de inserción laboral. Reconocemos estas necesidades y potenciamos la autonomía e inclusión social en todos los niveles.</p>
+               <p class="fs-6">Nuestra gestión está enfocada en mejorar la calidad de vida de la personas con discapacidad intelectual, trabajando en las áreas de educación, protección y de inserción laboral. Reconocemos estas necesidades y potenciamos la autonomía e inclusión social en todos los niveles.</p>
             </div>
          </div>
       </section>
@@ -52,7 +52,7 @@ get_header();
 					<div class="area-desc">
 						<div class="row row-img-txt align-items-center">
 							<div class="col-12 col-lg-6 col-img mb-5 mb-lg-0">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/areas/nosotros-programas-sociales.jpg" class="img-fluid" alt="area">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/quehacemos-programas-sociales.jpg" class="img-fluid" alt="area">
 							</div>
 							<div class="col-12 col-lg-6">
 								<div class="text-start">
@@ -66,7 +66,7 @@ get_header();
 					<div class="area-desc">
 						<div class="row row-img-txt align-items-center">
 							<div class="col-12 col-lg-6 col-img mb-5 mb-lg-0">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/areas/nosotros-inclusion-laboral.jpg" class="img-fluid" alt="area">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/quehacemos-inclusion-laboral.jpg" class="img-fluid" alt="area">
 							</div>
 							<div class="col-12 col-lg-6">
 								<div class="text-start">
@@ -80,7 +80,7 @@ get_header();
 					<div class="area-desc">
 						<div class="row row-img-txt align-items-center">
 							<div class="col-12 col-lg-6 col-img mb-5 mb-lg-0">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/areas/nosotros-centros-educativos.jpg" class="img-fluid" alt="area">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/quehacemos-centros-educativos.jpg" class="img-fluid" alt="area">
 							</div>
 							<div class="col-12 col-lg-6">
 								<div class="text-start">
@@ -94,7 +94,7 @@ get_header();
 					<div class="area-desc">
 						<div class="row row-img-txt align-items-center">
 							<div class="col-12 col-lg-6 col-img mb-5 mb-lg-0">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/areas/nosotros-otec.jpg" class="img-fluid ratio ratio-4x3" alt="area">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/quehacemos-otec.jpg" class="img-fluid ratio ratio-4x3" alt="area">
 							</div>
 							<div class="col-12 col-lg-6">
 								<div class="text-start">

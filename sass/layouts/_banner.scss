@@ -25,7 +25,25 @@
          background: variables.$gradient-banner;
          z-index: 0;
       }
-   } 
+   }
+
+   &.banner-ce {
+      .banner-bg::after {
+         background: variables.$gradient-banner-ce;
+      }
+   }
+
+   &.banner-pl {
+      .banner-bg::after {
+         background: variables.$gradient-banner-pl;
+      }
+   }
+
+   &.banner-otec {
+      .banner-bg::after {
+         background: variables.$gradient-banner-otec;
+      }
+   }
 
    .banner-caption {
       background-image: variables.$gradient;

@@ -124,18 +124,19 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
 );
-
-$bn-theme-colors: (
-  "white":      $white,
-  "black":      $black,
-)!default;
 
 // Custom theme colors
 $custom-theme-colors: (
-  //
-)!default;
+  "centros":      $yellow,
+  "laboral":      $green,
+  "otec":         $red,
+);
+
+// Custom-theme-colors mapping
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 // scss-docs-end theme-colors-map
 
 // Characters which are escaped by the escape-svg function

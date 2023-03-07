@@ -23,8 +23,7 @@ get_header();
 				<div class="banner-caption">
 					<div class="container-md">
 						<div class="col col-lg-6">
-							<h1>Transparencia</h1>
-							<p>Creando transformación en quiénes más lo necesitan.</p>
+							<h1><?php echo get_the_title(); ?></h1>
 						</div>
 					</div>
 				</div>

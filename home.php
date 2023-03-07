@@ -45,11 +45,11 @@ get_header();
                <h2>Un espacio seguro para el bienestar <br>y <span class="fw-bold">la integración social</span></h2>
                <p class="fs-6">En Fundación Coanil apoyamos y brindamos herramientas para el desarrollo de personas con discapacidad intelectual en Chile para promover su crecimiento educativo y profesional.</p>
             </div>
-            <div class="datos-coanil-container">
+            <div class="datos-coanil-container mt-5">
                <div class="row g-0">
                   <div class="col-12 col-sm-6 col-xl-3">
                      <div class="dato">
-                        <div class="dato-icono">
+                        <div class="dato-icono border-circle-clip">
                            <span>
                               <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-residence.svg" alt="">
                            </span>
@@ -67,7 +67,7 @@ get_header();
                   </div>
                   <div class="col-12 col-sm-6 col-xl-3">
                      <div class="dato">
-                        <div class="dato-icono">
+                        <div class="dato-icono border-circle-clip">
                            <span>
                               <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-education.svg" alt="">
                            </span>
@@ -85,7 +85,7 @@ get_header();
                   </div>
                   <div class="col-12 col-sm-6 col-xl-3">
                      <div class="dato">
-                        <div class="dato-icono">
+                        <div class="dato-icono border-circle-clip">
                            <span>
                               <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-mental-health.svg" alt="">
                            </span>
@@ -103,7 +103,7 @@ get_header();
                   </div>
                   <div class="col-12 col-sm-6 col-xl-3">
                      <div class="dato">
-                        <div class="dato-icono">
+                        <div class="dato-icono border-circle-clip">
                            <span>
                               <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-persons.svg" alt="">
                            </span>
