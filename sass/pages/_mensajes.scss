@@ -2,10 +2,21 @@
 
 // error 404
 .error-404 {
-   background-image: url(./img/vectors/vector-waves-404.svg);
-   background-repeat: no-repeat;
-   background-position: right;
-   background-size: auto 100%;
+   position: relative;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url(./img/vectors/vector-waves-404.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: auto 100%;
+      transform: rotate(90deg);
+   }
 
    .container {
       position: relative;
@@ -21,6 +32,11 @@
    }
 
    @media screen and (variables.$lg) {
+
+      &::before {
+         transform: none;
+      }
+
       .img-deco {
          left: 10%;
          width: 50%;

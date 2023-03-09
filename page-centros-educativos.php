@@ -44,11 +44,11 @@ get_header();
             </div>
 
 				<!-- nuestros centros -->
-				<div class="row flex-lg-row-reverse row-img-txt align-items-center justify-content-center py-5 ce-desc">
-					<div class="col-12 col-md-6 col-lg-7 col-img my-5 my-lg-0">
+				<div class="row flex-lg-row-reverse row-img-txt align-items-center justify-content-center mt-5 ce-desc">
+					<div class="col-12 col-lg-6 col-xxl-7 col-img my-5">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/centros-img.jpg" class="img-fluid" alt="centros educativos">
 					</div>
-					<div class="col-12 col-md-6 col-lg-5">
+					<div class="col-12 col-lg-6 col-xxl-5">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/logos/logo-coanil-educa.png" class="img-fluid mb-4" alt="logo Coanil Educa" width="300">
 						<h2>Nos mueve <strong>la inclusión</strong></h2>
 						<p>Fundación Educacional Coanil cuenta, al día de hoy, con 28 centros educacionales a lo largo del país. Cada una de nuestras instituciones está capacitada para brindar una educación de calidad a nuestros estudiantes, demostrando que la discapacidad intelectual no es una barrera para el aprendizaje y el crecimiento personal.</p>
@@ -132,7 +132,7 @@ get_header();
 			</div>
 		</section>
 
-		<section id="acciones" class="py-5">
+		<section id="acciones">
 			<div class="container">
 				<h3 class="text-center">Para lograr los objetivos, desarrollamos distintas acciones enfocadas en:</h3>
 				<div class="enfoque-centros-container">
