@@ -55,6 +55,7 @@ get_header();
 						<div><a href="<?php echo get_home_url(); ?>/que-hacemos/centros-educativos/conoce-nuestros-centros-educativos" class="btn btn-primary mt-4">Conoce nuestros centros</a></div>
 					</div>
 				</div>
+
 				<!-- cifras -->
 				<div class="datos-coanil-container mt-5">
 					<h2 class="text-start text-lg-center">Educación Coanil en cifras</h2>
@@ -124,7 +125,8 @@ get_header();
 					</div>
 					<div class="col-12 col-lg-6">
 						<h2>Nuestro enfoque</h2>
-						<p>Nuestro enfoque de enseñanza se centra en potenciar cada una de las habilidades de las personas con discapacidad intelectual, donde el foco principal está en lograr la inserción e inclusión social de cada uno de nuestros estudiantes. Para ésto, Fundación Educacional Coanil cuenta con programas, actividades y acciones destinadas a proporcionar una educación integral, considerando el entorno personal y social de cada uno de nuestros alumnos.</p>
+						<p>Nuestro enfoque de enseñanza se centra en potenciar cada una de las habilidades de las personas con discapacidad intelectual, donde el foco principal está en lograr la inserción e inclusión social de cada uno de nuestros estudiantes.</p>
+                  <p>Para esto, Fundación Educacional Coanil cuenta con programas, actividades y acciones destinadas a proporcionar una educación integral, considerando el entorno personal y social de cada uno de nuestros alumnos.</p>
 					</div>
 				</div>
 			</div>
@@ -134,17 +136,79 @@ get_header();
 			<div class="container">
 				<h3 class="text-center">Para lograr los objetivos, desarrollamos distintas acciones enfocadas en:</h3>
 				<div class="enfoque-centros-container">
-               <div class="row g-0">
+               <div class="row g-3">
                   <div class="col-12 col-sm">
                      <div class="enfoque">
                         <div class="enfoque-icono border-circle-clip yellow">
                            <span>
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-residence.svg" alt="">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-config.svg" alt="">
                            </span>
                         </div>
                         <div class="enfoque-texto">
-                           <h3>Ejecutar</h3>
-                           <p>Lineamientos teóricos y técnicos para la atención integral en las escuelas.</p>
+                           <div class="text-center">
+                              <h3 class="fs-5 fw-bold text-centros my-4">Ejecutar</h3>
+                              <p>Lineamientos teóricos y técnicos para la atención integral en las escuelas.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-sm">
+                     <div class="enfoque">
+                        <div class="enfoque-icono border-circle-clip yellow">
+                           <span>
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-holding-hands.svg" alt="">
+                           </span>
+                        </div>
+                        <div class="enfoque-texto">
+                           <div class="text-center">
+                              <h3 class="fs-5 fw-bold text-centros my-4">Acompañar</h3>
+                              <p>Lineamientos teóricos y técnicos para la atención integral en las escuelas.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-sm">
+                     <div class="enfoque">
+                        <div class="enfoque-icono border-circle-clip yellow">
+                           <span>
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-signs.svg" alt="">
+                           </span>
+                        </div>
+                        <div class="enfoque-texto">
+                           <div class="text-center">
+                              <h3 class="fs-5 fw-bold text-centros my-4">Guiar</h3>
+                              <p>El proyecto educativo de cada escuela.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-sm">
+                     <div class="enfoque">
+                        <div class="enfoque-icono border-circle-clip yellow">
+                           <span>
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-asistance.svg" alt="">
+                           </span>
+                        </div>
+                        <div class="enfoque-texto">
+                           <div class="text-center">
+                              <h3 class="fs-5 fw-bold text-centros my-4">Asesorar</h3>
+                              <p>Los procesos bajo la normativa MINEDUC – Coanil.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-sm">
+                     <div class="enfoque">
+                        <div class="enfoque-icono border-circle-clip yellow">
+                           <span>
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-eye.svg" alt="">
+                           </span>
+                        </div>
+                        <div class="enfoque-texto">
+                           <div class="text-center">
+                              <h3 class="fs-5 fw-bold text-centros my-4">Supervisar</h3>
+                              <p>Los procesos para medir la calidad del aprendizaje de los estudiantes.</p>
+                           </div>
                         </div>
                      </div>
                   </div>

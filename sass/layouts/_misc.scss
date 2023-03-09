@@ -1,52 +1,5 @@
 @use "../utils/variables";
 
-// fondo corte diagonal inferior
-.diagonal-bottom {
-    position: relative;
-    // color: variables.$white;
-    padding-bottom: 0rem!important;
-    margin-bottom: 10rem;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: inherit;
-        background-image: inherit;
-        background-attachment: fixed;
-        background-repeat: repeat;
-        background-position: center;
-        width: 100%;
-        height: 20%;
-        max-height: 10rem;
-        clip-path: polygon(0 0, 0 100%, 100% 0);
-        z-index: 1;
-    }
-
-    @media screen and (variables.$xxl) {
-        margin-bottom: 15rem;
-        
-        &::after {
-            height: 35%;
-            max-height: 15rem;
-        }
-    }
-}
-
-// fondo ondas grises 
-.bg-waves-light {
-    background-image: url(./img/waves-light-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: top;
-    background-position-x: 25%;
-    @media screen and (variables.$xl) {
-        background-position-x: 0;
-        background-size: 100%;
-    }
-}
-
 // circulo íconos
 .border-circle-clip {
     position: relative;

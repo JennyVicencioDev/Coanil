@@ -5,25 +5,32 @@
    height: auto;
    width: 100%;
    overflow: hidden;
+   display: flex;
+   flex-flow: row nowrap;
 
    .card-title {
       font-weight: 700;
    }
 
    .card-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 120px;
+      // position: absolute;
+      // top: 0;
+      // left: -80px;
+      // height: 100%;
+      // width: 170px;
+      width: 20%;
+      position: relative;
+      transition: all 0.3s ease;
       
       &::before {
          content: '';
          position: absolute;
          left: .5rem;
          top: 0;
-         background-image: url(./img/areas/mask-card-area-blue.svg);
-         background-repeat: repeat-y;
+         background-image: url(./img/areas/mask-card-area-blue.png);
+         background-repeat: no-repeat;
+         background-size: 90% 100%;
+         background-position: top right;
          height: 100%;
          width: 100%;
          z-index: 0;
@@ -36,6 +43,12 @@
          object-fit: cover;
          clip-path: url(#mask-cards-areas);
          z-index: 1;
+      }
+
+      svg {
+         position: absolute;
+         height: 0;
+         width: 0;
       }
 
       &::after {
@@ -54,12 +67,28 @@
    .card-body {      
       display: flex;
       flex-direction: column;
-      padding: 2rem 1rem 2rem 9rem;
+      padding: 2rem 1rem;
       text-align: center;
+      width: 70%;
+      // width: calc(100% - 170px + 80px);
+      // margin-left: auto;
    }
    
    p {
       margin-bottom: 2rem;
+   }
+
+   @media screen and (variables.$sm) {
+      .card-img {
+         // left: 0;
+
+         // img {
+         //    width: 170px;
+         // }
+      }
+      // .card-body {
+      //    width: calc(100% - 170px);
+      // }
    }
    
    @media screen and (variables.$md) {
@@ -70,7 +99,11 @@
          font-size: 1.125rem;
       }
 
+      .card-img {
+         width: 30%;
+      }
       .card-body {
+         padding: 2rem;
          text-align: left;
       }
    }

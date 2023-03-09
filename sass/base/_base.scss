@@ -24,17 +24,6 @@ iframe {
    max-width: 100%
 }
 
-section {
-   position: relative;
-   margin-top: 3rem;
-   margin-bottom: 3rem;
-
-   @media screen and (variables.$lg) {
-      margin-top: 6rem;
-      margin-bottom: 6rem;
-   }
-}
-
 form h2 {
    color: variables.$primary;
 }

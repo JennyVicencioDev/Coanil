@@ -9,3 +9,16 @@
       }
    }
 }
+
+
+
+.enfoque-centros-container {
+   .enfoque {
+      &-texto {
+
+         h3 {
+            color: variables.$yellow;
+         }
+      }
+   }
+}

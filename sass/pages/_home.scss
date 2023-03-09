@@ -101,7 +101,7 @@
          
          .card-img {
             &::before {
-               background-image: url(./img/areas/mask-card-area-blue.svg);
+               background-image: url(./img/areas/mask-card-area-blue.png);
             }
             &::after {
                background-color: rgba(variables.$blue, 0.3);
@@ -113,7 +113,7 @@
 
          .card-img {
             &::before {
-               background-image: url(./img/areas/mask-card-area-green.svg);
+               background-image: url(./img/areas/mask-card-area-green.png);
             }
             &::after {
                background-color: rgba(variables.$green, 0.3);
@@ -125,7 +125,7 @@
          
          .card-img {
             &::before {
-               background-image: url(./img/areas/mask-card-area-yellow.svg);
+               background-image: url(./img/areas/mask-card-area-yellow.png);
             }
             &::after {
                background-color: rgba(variables.$yellow, 0.3);
@@ -137,7 +137,7 @@
          
          .card-img {
             &::before {
-               background-image: url(./img/areas/mask-card-area-red.svg);
+               background-image: url(./img/areas/mask-card-area-red.png);
             }
             &::after {
                background-color: rgba(variables.$red, 0.3);
