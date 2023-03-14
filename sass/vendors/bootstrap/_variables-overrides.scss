@@ -62,7 +62,7 @@ $light-blue: #009EE3;
 $green: #386539;
 $light-green: #A2C037;
 $yellow: #E4A71A;
-$dark-yellow: #936D15;
+$dark-yellow: #C28119;
 $red: #C20E1A;
 $light-red: #E4666E;
 $fuchsia: #CC0F64;
@@ -129,7 +129,8 @@ $theme-colors: (
 
 // Custom theme colors
 $custom-theme-colors: (
-  "centros":      $yellow,
+  "centros-1":      $yellow,
+  "centros-2":      $dark-yellow,
   "laboral":      $green,
   "otec":         $red,
 );

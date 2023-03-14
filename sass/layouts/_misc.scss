@@ -4,28 +4,43 @@
 .border-circle-clip {
     position: relative;
     border-radius: 50%;
-    background-clip: padding-box;
-    border: 8px solid transparent;  
-    background-color: variables.$white;
+    // background: linear-gradient(108.18% 1145% at 0% 0%, #0655CD 30%, #009EE3 70%) border-box;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, #0655CD 30%, #009EE3 70%) border-box;
+    border: 8px solid transparent;
     margin: .5rem auto;
-    padding: 2rem;
+    padding: 0;
     height: 128px;
     width: 128px;
-    &:before {
-       content: '';
-       position: absolute;
-       top: 0; right: 0; bottom: 0; left: 0;
-       border-radius: inherit;
-       background: radial-gradient(108.18% 1145% at 0% 0%, #0655CD 30%, #009EE3 70%);
-       margin: -.5rem; 
-       z-index: -1;
-    }
+    // &:before {
+    //    content: '';
+    //    position: absolute;
+    //    top: 0; right: 0; bottom: 0; left: 0;
+    //    border-radius: inherit;
+    //    background: radial-gradient(108.18% 1145% at 0% 0%, #0655CD 30%, #009EE3 70%);
+    //    margin: -.5rem; 
+    //    z-index: -1;
+    // }
 
     &.yellow {
-        &:before {
-            background: radial-gradient(108.18% 1145% at 0% 0%, variables.$dark-yellow 30%, variables.$yellow 70%);
+        background: linear-gradient(white, white) padding-box, linear-gradient(to right, variables.$dark-yellow 30%, variables.$yellow 70%) border-box;
+        
+        // &:before {
+        //     background: radial-gradient(108.18% 1145% at 0% 0%, variables.$dark-yellow 30%, variables.$yellow 70%);
 
-        }
+        // }
+    }
+
+    & > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    img {
+        height: 56%;
+        width: 56%;
     }
 }
 

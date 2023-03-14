@@ -1,24 +1,18 @@
 @use "../../utils/variables";
 
-.ce-desc {
-   .col-img {
-      &::before {
+
+.col-img {
+   &::before {
+      .ce-desc & {
          background-image: url(img/vectors/vector-yellow-2.svg);
          left: 5%;
          height: 120%;
       }
-   }
-}
 
-
-
-.enfoque-centros-container {
-   .enfoque {
-      &-texto {
-
-         h3 {
-            color: variables.$yellow;
-         }
+      .ce-equipo & {
+         background-image: url(img/vectors/vector-yellow-2.svg);
+         height: 120%;
+         transform: rotateY(180deg);
       }
    }
 }
